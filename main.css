@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.bar {
+    height: 7.5vh;
+    order: 999;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+nav, .col, .row, .scrlBtn {
+    display: flex;
+}
+
+nav, .col, .row {
+    align-items: center;
+}
+
+nav, .row, .scrlBtn {
+    justify-content: center;
+}
+
+/* the smaller img {
+    min-width: ;
+} */
+
+nav { 
+    position: fixed;
+    top: 0;
+    width: inherit;
+} 
+
+.row {
+    flex-wrap: wrap;
+}
+
+header, section {
+    height: 85vh;
+}
+
+header { 
+    background-image: url("alcedo-atthis-881594_1280flippedWide_w1440p.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+h1 {
+    font-family: 'Lato', sans-serif;
+}
+
+.about {
+    background: rgb(255, 151, 255);
+}
+
+.projects {
+    background: rgb(0, 152, 172);
+}
+
+div.scrlBtn {
+    position: absolute; 
+    height: 10vh;
+    width: 100%;
+    bottom: 3.3vh;
+}
+
+.scrlBtn input {
+    width: 20vw;
+}
+
+.col {
+    height: 100%;
+}
+
+.left {
+    flex: 50%;
+}
+
+.center {
+    flex: 40%;
+}
+
+.right {
+    flex: 10%;
+}
+
+/* footer {
+    font-size: 12pt;
+} */
+
+/* For mobile phones: */
+
+  
+@media only screen and (max-width: 700px) {
+    header { 
+        background-image: url("alcedo-atthis-881594_1280flippedWide_w700p.jpg");
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        background-position: left;
+    }
+}
+
+/* Make it so the smallest version shrinks the header height when smaller viewport */
+@media only screen and (max-width: 500px) {
+    header { 
+        background-image: url("alcedo-atthis-881594_1280flippedWide_w425p.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}
