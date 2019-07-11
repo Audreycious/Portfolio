@@ -34,12 +34,6 @@ header {
     padding: 400px;
 }
 
-#background-container {
-    background-image: url("/images/alcedo-atthis-881594_1280flippedWide_w1440p.jpg");
-    background-position: center;
-    background-size: cover;
-}
-
 input {
     position: absolute;
     bottom: 50px;
@@ -56,35 +50,13 @@ input {
     background-color: rgb(0, 152, 172);
 }
 
-/* header { 
-    background-image: url("alcedo-atthis-881594_1280flippedWide_w1440p.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
 h1 {
     font-family: 'Lato', sans-serif;
-} */
+}
 
 
 
 /* For mobile phones: */
-@media only screen and (max-width: 700px) {
-    /* header { 
-        background-image: url("alcedo-atthis-881594_1280flippedWide_w700p.jpg");
-        background-repeat: no-repeat;
-        background-size: auto 100%;
-        background-position: left;
-    } */
-}
+@media only screen and (max-width: 720px) {
 
-/* Make it so the smallest version shrinks the header height when smaller viewport */
-@media only screen and (max-width: 500px) {
-    /* header { 
-        background-image: url("alcedo-atthis-881594_1280flippedWide_w425p.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-    } */
 }
