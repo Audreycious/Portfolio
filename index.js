@@ -10,13 +10,13 @@ const STORE = {
 function buttonHandler(params) {
     // listen for when clicked
     // click trigger bounces to the appropriate section
-    // about button
-    $("body").on('click', "")
     // home button
     $("body").on('click', "")
-    // input button
+    // about button
     $("body").on('click', "")
     // projects button
+    $("body").on('click', "")
+    // contact button
     $("body").on('click', "")
     // email button
     $("body").on('click', "")
