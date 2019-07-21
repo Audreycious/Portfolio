@@ -11,7 +11,9 @@ function buttonHandler(params) {
     // listen for when clicked
         // click trigger bounces to the appropriate section
     // home button
-    $("body").on('click', "#home-button")
+    $("body").on('click', ".home-button")
+        // 
+
     // about button
     $("body").on('click', "#about-button")
     // projects button
