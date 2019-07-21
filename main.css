@@ -18,7 +18,7 @@ html, body {
 }
 
 body {
-    margin-top: 5%;
+    margin-top: 50px;
     padding-top: 10vh;
 }
 
@@ -30,6 +30,7 @@ nav {
     display: flex;
     justify-content: space-between;
     padding: 0 50px;
+    background-color: teal;
 } 
 
 ul {
@@ -37,7 +38,7 @@ ul {
 }
 
 li {
-    margin: 20px 10px;
+    margin: 15px 10px;
     list-style: none;
 }
 
@@ -48,6 +49,7 @@ li button {
     padding:0;
     cursor: pointer;
     font-size: 16pt;
+    color: white;
 }
 
 footer {
