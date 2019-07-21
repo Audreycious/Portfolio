@@ -5,7 +5,19 @@
 html, body {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
-    width: 100%;
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+}
+
+body {
+    /* background-image: url("./images/kingfisher_heroBG_flippedWide_1440x811.jpg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;*/
+    background-color: rgba(13, 51, 57, 0.8); 
 }
 
 .row {
@@ -17,9 +29,29 @@ html, body {
     flex-direction: column;
 }
 
-body {
-    margin-top: 50px;
-    padding-top: 10vh;
+main {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    align-content: center;
+}
+
+#render-container, #background-image {
+    position: absolute;
+    height: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#render-container {
+    width: 100%;
+}
+
+#background-image {
+    z-index: -1;
+    opacity: 0.85;
+    min-width: 100%;
 }
 
 nav { 
@@ -30,7 +62,7 @@ nav {
     display: flex;
     justify-content: space-between;
     padding: 0 50px;
-    background-color: teal;
+    /* background-color: teal; */
 } 
 
 ul {
@@ -48,20 +80,31 @@ li button {
     margin:0;
     padding:0;
     cursor: pointer;
-    font-size: 16pt;
+    font-size: 20pt;
     color: white;
 }
 
 footer {
     width: 100%;
     height: 50px;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    font-size: 20pt;
+    color: white;
+    margin: 15px 10px;
 }
 
 header {
-    height: 100vh;
-    padding: 20px;
-    justify-content: center;
-    background-image: url() 
+    margin: auto;
+    height: 100%;
+}
+
+.hero-text {
+    margin: auto 10% auto 50%;
+    height: 50vh;
+    width: 40%;
+    border: 1pt solid black;
 }
 
 section {
@@ -84,15 +127,7 @@ h1, h2, li button  {
     font-family: 'Lato', sans-serif;
 }
 
-.hero-text {
-    width: 400px;
-    height: 400px;
-    border: 1pt solid black;
-}
 
-#render-container {
-
-}
 
 /* For mobile phones: */
 @media only screen and (max-width: 720px) {
