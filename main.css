@@ -67,6 +67,8 @@ nav {
 
 ul {
     margin: 0;
+    width: 100%;
+    padding: 0;
 }
 
 li {
@@ -127,9 +129,47 @@ h1, h2, li button  {
     font-family: 'Lato', sans-serif;
 }
 
+#hemburgairrrrr-content-box {
+    position: absolute;
+    right: 0;
+    width: 30%;
+    height: auto;
+    min-height: 50%;
+    border: 1px solid black;
+    justify-content: space-evenly;
+    padding: 2%;
+}
+
+#hemburgairrrrr-content-box li button {
+    font-size: 10pt;
+    margin: 0 auto;
+}
+
 
 
 /* For mobile phones: */
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 420px) {
+    .logo-button button, .hemburgairrrrr-button {
+        font-size: 10pt;
+        white-space: nowrap;
+    }
 
+    nav {
+        padding: 0 3%;
+        align-items: center;
+    }
+    
+    ul {
+        width: 100%;
+        /* padding: 10px; */
+        justify-content: space-between;
+    }
+
+    li {
+        margin: 0;
+    }
+
+    .about-button, .home-button, .projects-button, .contact-button {
+        display: none;
+    }
 }

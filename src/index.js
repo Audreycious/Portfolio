@@ -36,10 +36,10 @@ function buttonHandler(params) {
         // trigger the calling with the set up calling service when the phone number is clicked
             // stretch - if no set up calling service, ask to send it to your phone as a text
 
-    // hamburger menu button
+    // hemburgairrrrr menu button
         // changes background to blurred version
-    $("body").on('click', ".hamburger-button")
-        // trigger the hamburger menu popup with new hyper links that use the buttons above
+    $("body").on('click', ".hemburgairrrrr-button")
+        // trigger the hemburgairrrrr menu popup with new hyper links that use the buttons above
 
     // stretch: add a contact button that causes a pop up over the hero page and changes the background to the blurred version
     
