@@ -36,7 +36,7 @@ main {
     align-content: center;
 }
 
-#render-container, #background-image {
+#render-container, #background-image, #background-image-hexagon {
     position: absolute;
     height: 80%;
     top: 50%;
@@ -48,8 +48,8 @@ main {
     width: 100%;
 }
 
-#background-image {
-    z-index: -1;
+#background-image, #background-image-hexagon {
+    z-index: -2;
     opacity: 0.85;
     min-width: 100%;
 }
@@ -73,7 +73,7 @@ li {
 }
 
 li button, footer {
-    color: white;
+    color: rgba(241, 241, 241, 0.9);
     font-size: 20pt;
 }
 
@@ -100,16 +100,16 @@ header {
 }
 
 .hero-text {
-    margin: 30% 5% auto 45%;
+    margin: 33% 5% auto 45%;
     height: 50vh;
     width: 50%;
-    color: rgba(241, 241, 241, 0.842);
+    color: rgba(241, 241, 241, 0.9);
 }
 
 .hero-text p {
     font-style: italic;
     font-size: 1.1em;
-    width: 95%;
+    width: 90%;
     line-height: 1.5em;
 }
 
@@ -117,12 +117,12 @@ section {
     height: 1000px;
 }
 
-#bounce-container {
+/* #bounce-container {
     position: absolute;
     width: 100%;
     bottom: 20px;
     text-align: center;
-}
+} */
 
 h1, h2, li button  {
     font-family: 'Lato', sans-serif;
@@ -131,16 +131,31 @@ h1, h2, li button  {
 h1 {
     margin: 0;
     white-space: nowrap;
-    font-size: 1.7em;
+    font-size: 1.8em;
+    /* font-style: italic; */
 }
 
+.blur-filter {
+    filter: blur(2px);
+}
 
+.hidden {
+    display: none;
+}
+
+/* #background-image, #background-image-hexagon {
+    transition: opacity 2s ease-in-out;
+}
+
+img[id^="background-image"].click-opacity {
+    opacity: 0;
+} */
 
 
 /* For mobile phones: */
 @media only screen and (max-width: 420px) {
     .logo-button {
-        font-size: 14pt;
+        font-size: 1.5em;
         white-space: nowrap;
     }
 
@@ -173,13 +188,19 @@ h1 {
         min-height: 30%;
         /* border: 1px solid black; */
         justify-content: space-evenly;
-        padding: 2%;
+        padding: 0 2% 2%;
         display: none;
     }
     
     #hemburgairrrrr-content-box li button {
-        font-size: 12pt;
+        /* font-size: 1.2em;
+        letter-spacing: 2pt;*/
         margin: 0 2% 0 auto;
+        /* line-height: 1.5em;  */
+        font-style: italic;
+        font-size: 1.1em;
+        /* width: 90%; */
+        line-height: 1.5em;
     }
 
     .hemburgairrrrr-menu-button {

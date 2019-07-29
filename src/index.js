@@ -12,15 +12,15 @@ function buttonHandler(params) {
     // listen for when clicked
         // click trigger bounces to the appropriate section
     // home button
-    $("main").on('click', ".home-button", function() {
-        $("header").html(`
-            <div role="hero-text" class="hero-text">
-                <h1>Audrey Foss</h1>
-                <p>Future, expert, full-stack Web Developer based in Minneapolis, MN. 
-                Specializing in creative content design, unique strategies, and superb customer service.</p>
-            </div>
-        `)
-    })
+    // $("main").on('click', ".home-button", function() {
+    //     $("header").html(`
+    //         <div role="hero-text" class="hero-text">
+    //             <h1>Audrey Foss</h1>
+    //             <p>Future, expert, full-stack Web Developer based in Minneapolis, MN. 
+    //             Specializing in creative content design, unique strategies, and superb customer service.</p>
+    //         </div>
+    //     `)
+    // })
         // trigger the home view in the rendering area when either the logo or the hom button are clicked
 
     // about button
@@ -50,11 +50,30 @@ function buttonHandler(params) {
     $("main").on('click', "input.hemburgairrrrr-menu-button", function () {
         console.log("Hamburger clicked!");
         STORE.hamburgerMenuOpen = !STORE.hamburgerMenuOpen;
+        console.log(STORE.hamburgerMenuOpen);
         if (STORE.hamburgerMenuOpen) {
+            // $("img#background-image").attr("src", "images/kingfisher_heroBG_hexagon_720square.png");
+
+            // $("img#background-image-hexagon").addClass("click-opacity");
+
+            $(".hero-text h1").addClass("blur-filter");
+
+            // $("img#background").addClass("blur-filter");
+
+            $(".hero-text p").fadeOut(200, function() {
+
+            });
+            
             $("#hemburgairrrrr-content-box").fadeIn("slow", function() {
 
         })}
         else {
+            // $("img#background-image").attr("src", "images/kingfisher_heroBG_flippedWide_1440x811.jpg");
+            $(".hero-text").removeClass("blur-filter");
+            $(".hero-text p").fadeIn("slow", function() {
+
+            });
+            $(".hero-text h1").removeClass("blur-filter");
             $("#hemburgairrrrr-content-box").fadeOut("slow", function() {
 
             })
