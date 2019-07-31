@@ -56,25 +56,25 @@ function buttonHandler(params) {
 
             // $("img#background-image-hexagon").addClass("click-opacity");
 
-            $(".hero-text h1").addClass("blur-filter");
+            $(".hero-text").addClass("blur-filter");
 
             // $("img#background").addClass("blur-filter");
 
-            $(".hero-text p").fadeOut(200, function() {
+            // $(".hero-text p").fadeOut(200, function() {
 
-            });
+            // });
             
-            $("#hemburgairrrrr-content-box").fadeIn("slow", function() {
+            $("#hemburgairrrrr-content-nav").fadeIn("slow", function() {
 
         })}
         else {
             // $("img#background-image").attr("src", "images/kingfisher_heroBG_flippedWide_1440x811.jpg");
-            $(".hero-text").removeClass("blur-filter");
-            $(".hero-text p").fadeIn("slow", function() {
+            // $(".hero-text").removeClass("blur-filter");
+            // $(".hero-text p").fadeIn("slow", function() {
 
-            });
-            $(".hero-text h1").removeClass("blur-filter");
-            $("#hemburgairrrrr-content-box").fadeOut("slow", function() {
+            // });
+            $(".hero-text").removeClass("blur-filter");
+            $("#hemburgairrrrr-content-nav").fadeOut("slow", function() {
 
             })
         }
