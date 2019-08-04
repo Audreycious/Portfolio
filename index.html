@@ -21,20 +21,19 @@
         <main role="main" class="row">
             <nav role="navigation" class="row">
                 <ul class="row">
-                    <li><button class="logo-button">Kingfisher WebDev</input></li>
-                    <li><button class="home-button">Home</button></li>
+                    <li><button class="logo-button home-link">Kingfisher WebDev</button></li>
+                    <li><button class="home-button home-link">Home</button></li>
                     <li><button class="about-button">About</button></li>
                     <li><button class="projects-button">Projects</button></li>
                     <li><button class="contact-button">Contact</button></li>
                     <li class="hemburgairrrrr-menu-button"><input class="hemburgairrrrr-menu-button" type="image" src="images\hamburger-menu-icon.png"></input></li>
                 </ul>
             </nav>
-            <!-- <img id="background-image" src="images/kingfisher_heroBG_flippedWide_1440x811.jpg" class="click-opacity"/> -->
             <img id="background-image-hexagon" src="images/kingfisher_heroBG_hexagon_720square.png" />
             <div role="render-area" id="render-container">
                 <div role="hemburgairrrrr-content-nav" id="hemburgairrrrr-content-nav" class="row">
                     <ul id="hemburgairrrrr-navbar" class="row">
-                        <li><button class="home-button-hemburgairrrrr">Home</button></li>
+                        <li><button class="home-button-hemburgairrrrr home-link">Home</button></li>
                         <li><button class="about-button-hemburgairrrrr">About</button></li>
                         <li><button class="projects-button-hemburgairrrrr">Projects</button></li>
                         <li><button class="contact-button-hemburgairrrrr">Contact</button></li>
@@ -49,39 +48,43 @@
                 <header role="content-area" class="row">
                     <section role="content-section" id="content-section">
                         <!-- Home Page View -->
-                        <!-- <div id="home-content">
+                        <div id="home-section">
                             <h1>Audrey Foss</h1>
                             <p>Future, expert, full-stack Web Developer based in Minneapolis, MN. 
                             Specializing in creative content design, unique strategies, and superb customer service.</p>
-                        </div> -->
+                        </div>
                         
-                        <!-- Home Page View -->
-                        <!-- <div role="about-section" id="about-content">
-                            <p>After achieving personal goals in my business career and marriage to my amazing wife, I joined Thinkful to pursue my passion for tech; specifically for:</p> 
-                            <li>○ Working with clients, listening to fulfill their needs</li>
-                            <li>○ Designing a unique experience with each project</li>
-                            <li>○ Building creative solutions with forward thinking</li>
-                            <li>○ Being proud of the content I can put out</li>
+                        <!-- About Page View -->
+                        <section role="about-section" id="about-section" class="hidden">
+                            <!-- About Page Desktop View -->
+                            <div class="page720 about-section" role="desktop-about-content">
+                                <p>After achieving personal goals in my business career and marriage to my amazing wife, I joined Thinkful to pursue my passion for tech; specifically for:</p> 
+                                <li>○ Working with clients, listening to fulfill their needs</li>
+                                <li>○ Designing a unique experience with each project</li>
+                                <li>○ Building creative solutions with forward thinking</li>
+                                <li>○ Being proud of the content I can put out</li>
+                                
+                                <p>While I am passionate about learning and seeking answers, which can be seen in my <a href="#">Projects</a>, I am also a fastidious planner with great communication skills to set your milestones and meet your deadlines. I am the full-stack real-deal.
                             
-                            <p>While I am passionate about learning and seeking answers, which can be seen in my <a href="#">Projects</a>, I am also a fastidious planner with great communication skills to set your milestones and meet your deadlines. I am the full-stack real-deal.
-                        
-                            I enjoy spending my free time biking around Minneapolis, cooking ~ 'chopped'-style, and playing weekly, unnecessarily-complicated board games with friends.</p>
-                        </div> -->
+                                I enjoy spending my free time biking around Minneapolis, cooking ~ 'chopped'-style, and playing weekly, unnecessarily-complicated board games with friends.</p>
+                            </div>
 
-                        <!-- About Page Mobile View -->
-                        <!-- <section role="about-section" id="about-content-mobile">
-                            <p>After achieving personal goals in business and marriage, I joined Thinkful to pursue my passion for tech. I especially enjoy working with clients, designing unique experiences with each project, building creative solutions with forward thinking, and being proud of the content I can put out.
-                            <br>
-                            <p>While I am passionate about learning and seeking answers, which can be seen in my <a href="#">Projects</a>. I am also a fastidious planner with great communication skills to set your milestones and meet your deadlines. I am the full-stack real-deal.
-                        
-                            I enjoy spending my free time biking around Minneapolis, cooking, and board games with friends.</p>
-                        </section> -->
+                            <!-- About Page Mobile View -->
+                            <div role="about-section-mobile" id="about-section-mobile" class="about-section">
+                                <p>After achieving personal goals in business and marriage, I joined Thinkful to pursue my passion for tech. I especially enjoy working with clients, designing unique experiences with each project, building creative solutions with forward thinking, and being proud of the content I can put out.
+                                <br>
+                                <p>While I am passionate about learning and seeking answers, which can be seen in my <a href="#">Projects</a>. I am also a fastidious planner with great communication skills to set your milestones and meet your deadlines. I am the full-stack real-deal.
+                            
+                                I enjoy spending my free time biking around Minneapolis, cooking, and board games with friends.</p>
+                            </div>
+                        </section>
 
                         <!-- Projects Page Mobile View -->
-                        <section role="projects-section" id="projects-content-mobile">
+                        <section role="projects-section" id="projects-section" class="projects-section hidden">
                             <div id="quiz-app" class="project">
                                 <div class="projects-header">
                                     <h2>Simpsons Quiz App</h2>
+                                    <p>A 10-question quiz app based on the popular TV show: The Simpsons</p>
                                 </div>
                                 <div id="quiz-app-link" class="projects-link"> 
                                     <a href="https://audreycious.github.io/Quiz-App/" class="app-picture1" ><img class="app-picture1" src="images\quiz-app_homepage-view.png" alt="The home page view of the Simpsons' Quiz by Audrey Foss"></a>
@@ -118,7 +121,7 @@
                         </section>
 
                         <!-- Contact Page Mobile View -->
-                        <!-- <section role="contact-section" id="contact-content">
+                        <section role="contact-section" id="contact-section" class="contact-section hidden">
                             <form action="">
                                 <legend>Hire Audrey</legend>
 
@@ -135,13 +138,13 @@
                                     <input type="submit" name="submit" id="submit-button" value="Submit">
                                 </div>
                             </form>
-                        </section> -->
+                        </section>
                     </div>
                 </header>
             </div>
         </main>     
         <footer role="content-info" id="footer" class="">
-            <p style="font-size: 10pt; font-style: italic; width: 80;">My work speaks for itself.</p>
+            <p style="margin: auto; font-size: 10pt; font-style: italic; width: 80;">My work speaks for itself.</p>
         </footer>
     </body>
     <script type="text/javascript" src="src\index.js"></script>

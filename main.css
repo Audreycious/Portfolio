@@ -121,7 +121,7 @@ p {
     margin: 0;
 }
 
-#home-content h1 {
+#home-section h1 {
     margin: 20px 0;
 }
 
@@ -145,7 +145,7 @@ h1 {
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 .contact-input {
@@ -286,7 +286,17 @@ li {
 
 .project {
     height: 100%;
-    margin-bottom: 30%;
+    margin-bottom: 10%;
+}
+
+.projects-header {
+    text-align: center;
+}
+
+.project p {
+    font-size: .7em;
+    padding: 0 7% 5%;
+    margin: 0 auto;
 }
 
 .projects-link {
@@ -295,7 +305,6 @@ li {
 
 [class^=app-picture] {
     width: 100%;
-    
 }
 
 .app-picture1 {
@@ -313,10 +322,22 @@ h2 {
     width: 100%;
     font-size: 5vw;
     text-align: center;
-    margin: 0 0 2vh 0;
+    margin: 0;
+    padding: 2%;
 }
 
+
+
+
+
+
+
+
+
+
 /* For mobile phones: */
-@media only screen and (max-width: 420px) {
-    
+@media only screen and (max-width: 720px) {
+    .page720 {
+        display: none !important;
+    }
 }

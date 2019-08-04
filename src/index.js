@@ -11,22 +11,37 @@ const STORE = {
 function buttonHandler(params) {
     // listen for when clicked
         // click trigger bounces to the appropriate section
-    // home button
-    // $("main").on('click', ".home-button", function() {
-    //     $("header").html()
-        // trigger the home view in the rendering area when either the logo or the hom button are clicked
+
+    // Home Page View
+    $("main").on('click', ".home-link", function() {
+        console.log("Home or Logo clicked!");
+        $("#content-section").children().addClass("hidden");
+        $("#home-section").removeClass("hidden").fadeIn("slow");
+        blurHandler();
+    })
 
     // about button
-    // $("body").on('click', ".about-button")
-        // trigger the about view when about is clicked
+    $("main").on('click', "[class^=about-button]", function() {
+        console.log("About clicked!");
+        $("#content-section").children().addClass("hidden");
+        $("#about-section").removeClass("hidden").fadeIn("slow");
+        blurHandler();
+    })
 
     // projects button
-    // $("body").on('click', ".projects-button")
-        // trigger the projects view when projects is clicked
+    $("main").on('click', "[class^=projects-button]", function() {
+        console.log("Projects clicked!");
+        $("#content-section").children().addClass("hidden");
+        $("#projects-section").removeClass("hidden").fadeIn("slow");
+        blurHandler();
+    })
 
-    // contact button - stretch
-    // $("body").on('click', ".contact-button")
-        // trigger the contact popup when contact is clicked
+    $("body").on('click', "[class^=contact-button]", function() {
+        console.log("Contact clicked!");
+        $("#content-section").children().addClass("hidden");
+        $("#contact-section").removeClass("hidden").fadeIn("slow");
+        blurHandler();
+    })
 
     // email button
     // $("body").on('click', ".email-button")
@@ -40,24 +55,11 @@ function buttonHandler(params) {
 
     // hemburgairrrrr menu button
         // changes background to blurred version
-    $("main").on('click', "input.hemburgairrrrr-menu-button", function () {
-        STORE.hamburgerMenuOpen = !STORE.hamburgerMenuOpen;
-        if (STORE.hamburgerMenuOpen) {
-            $("#content-section").addClass("blur-filter");
-            $("#hemburgairrrrr-content-nav").fadeIn("slow", function() {
-
-        })}
-        else {
-            $("#content-section").removeClass("blur-filter");
-            $("#hemburgairrrrr-content-nav").fadeOut("slow", function() {
-
-            })
-        }
+    $("main").on('click', "input.hemburgairrrrr-menu-button",  function () {
+        blurHandler()
     })
         // trigger the hemburgairrrrr menu popup with new hyper links that use the buttons above
 
-    // stretch: add a contact button that causes a pop up over the hero page and changes the background to the blurred version
-    
 }
 
 // A function that handles how the contact form functions when text is input vs when the text box is empty
@@ -69,6 +71,30 @@ function contactLabelHandler() {
         else {
             $(this).prev().css({opacity: 100});
         }
+    });
+}
+
+function blurHandler() {
+    STORE.hamburgerMenuOpen = !STORE.hamburgerMenuOpen;
+        if (STORE.hamburgerMenuOpen) {
+            blurIn();
+        }
+        else {
+            blurOut();
+        }
+}
+
+function blurIn() {
+    $("#content-section").addClass("blur-filter");
+    $("#hemburgairrrrr-content-nav").fadeIn("slow", function() {
+
+    })
+}
+
+function blurOut() {
+    $("#content-section").removeClass("blur-filter");
+    $("#hemburgairrrrr-content-nav").fadeOut("slow", function() {
+
     });
 }
 
