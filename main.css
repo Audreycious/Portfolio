@@ -109,7 +109,7 @@ header {
 
 p {
     font-style: italic;
-    font-size: 3.5vw;
+    font-size: 4vw;
     line-height: 4.5vw;
     width: 90%;
     margin: 0;
@@ -124,18 +124,10 @@ p {
     margin-bottom: 10%;
 }
 
-
 section {
     height: 1000px;
     padding-top: 40px;
 }
-
-/* #bounce-container {
-    position: absolute;
-    width: 100%;
-    bottom: 20px;
-    text-align: center;
-} */
 
 h1, h2, li button  {
     font-family: 'Lato', sans-serif;
@@ -161,20 +153,30 @@ h1 {
     -webkit-transition-duration: 1s;
     -moz-transition-duration: 1s;
     -o-transition-duration: 1s;
+    overflow: scroll;
 }
 
 #about-content {
     font-size: 9pt;
     margin: 0;
 }
- 
-/* #background-image, #background-image-hexagon {
-    transition: opacity 2s ease-in-out;
+
+#submit-button {
+    width: 70px;
 }
 
-img[id^="background-image"].click-opacity {
-    opacity: 0;
-} */
+input {
+    width: 100%;
+    margin: 0 auto 1vh;
+}
+
+label {
+    font-size: .7em;
+}
+
+.center {
+    text-align: center;
+}
 
 
 /* For mobile phones: */
@@ -210,26 +212,6 @@ img[id^="background-image"].click-opacity {
         height: 5%;
         padding: 0;
     }
-
-    /* #hemburgairrrrr-content-box {
-        position: absolute;
-        right: 0;
-        width: 30%;
-        height: auto;
-        min-height: 30%;
-        justify-content: space-evenly;
-        padding: 0 2% 2%;
-        display: none;
-        background-color: rgba(13, 51, 57, 0.8); 
-        z-index: 999;
-    }
-    
-    #hemburgairrrrr-content-box li button {
-        margin: 0 2% 0 auto;
-        font-style: italic;
-        font-size: 1.1em;
-        line-height: 1.5em;
-    } */
 
     #hemburgairrrrr-content-nav {
         position: absolute;
