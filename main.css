@@ -111,6 +111,7 @@ header {
     -o-transition-duration: 1s;
     overflow: auto;
     box-shadow: none;
+    position: absolute;
 }
 
 p {
@@ -126,7 +127,7 @@ p {
 }
 
 section {
-
+    position: absolute;
 }
 
 h1, h2, li button  {

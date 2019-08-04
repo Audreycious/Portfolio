@@ -1,10 +1,6 @@
 
 const STORE = {
-    homePageBG: null,
-    aboutPageContent: null,
-    projectsPageContent: null,
-    heroPageContent: null,
-    hamburgerMenuOpen: false
+    currentView: null
 };
 
 
@@ -13,33 +9,60 @@ function buttonHandler(params) {
         // click trigger bounces to the appropriate section
 
     // Home Page View
-    $("main").on('click', ".home-link", function() {
-        console.log("Home or Logo clicked!");
-        $("#content-section").children().addClass("hidden");
-        $("#home-section").removeClass("hidden").fadeIn("slow");
+    $("main").on('click', "[class^=home-button]", function() {
+        console.log("Home clicked!");
+        $("#content-section").children().fadeOut("slow", function() {
+
+        });
+        $("#home-section").removeClass("hidden").fadeIn("slow", function() {
+
+        });
         blurHandler();
+    })
+
+    // logo button
+    $("main").on('click', "[class^=logo-button]", function() {
+        console.log("Logo clicked!");
+        $("#content-section").children().fadeOut("slow", function() {
+
+        });
+        $("#home-section").removeClass("hidden").fadeIn("slow", function() {
+
+        });
     })
 
     // about button
     $("main").on('click', "[class^=about-button]", function() {
         console.log("About clicked!");
-        $("#content-section").children().addClass("hidden");
-        $("#about-section").removeClass("hidden").fadeIn("slow");
+        $("#content-section").children().fadeOut("slow", function() {
+
+        });
+        $("#about-section").removeClass("hidden").fadeIn("slow", function() {
+
+        });
         blurHandler();
     })
 
     // projects button
     $("main").on('click', "[class^=projects-button]", function() {
         console.log("Projects clicked!");
-        $("#content-section").children().addClass("hidden");
-        $("#projects-section").removeClass("hidden").fadeIn("slow");
+        $("#content-section").children().fadeOut("slow", function() {
+
+        });
+        $("#projects-section").removeClass("hidden").fadeIn("slow", function() {
+
+        });
         blurHandler();
     })
 
-    $("body").on('click', "[class^=contact-button]", function() {
+    $("main").on('click', "[class^=contact-button]", function() {
         console.log("Contact clicked!");
-        $("#content-section").children().addClass("hidden");
-        $("#contact-section").removeClass("hidden").fadeIn("slow");
+        $("#content-section").children().fadeOut("slow", function() {
+
+        });
+        $("#contact-section").removeClass("hidden").fadeIn("slow", function() {
+
+        });
         blurHandler();
     })
 
