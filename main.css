@@ -100,11 +100,17 @@ header {
     height: 100%;
 }
 
-.hero-text {
-    margin: 30% auto auto 45%;
+#content-section {
+    margin: 17vh auto auto 43vw;
     height: 50vh;
     width: 50%;
     color: rgba(241, 241, 241, 0.9);
+    transition-duration: 1s;
+    -webkit-transition-duration: 1s;
+    -moz-transition-duration: 1s;
+    -o-transition-duration: 1s;
+    overflow: auto;
+    box-shadow: none;
 }
 
 p {
@@ -119,14 +125,8 @@ p {
     margin: 20px 0;
 }
 
-#about-content p {
-    width: 100%;
-    margin-bottom: 10%;
-}
-
 section {
-    height: 1000px;
-    padding-top: 40px;
+
 }
 
 h1, h2, li button  {
@@ -148,92 +148,175 @@ h1 {
     display: none;
 }
 
-.hero-text {
-    transition-duration: 1s;
-    -webkit-transition-duration: 1s;
-    -moz-transition-duration: 1s;
-    -o-transition-duration: 1s;
-    overflow: scroll;
+.contact-input {
+    background: transparent;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 4% 4% 4% 5%;
+    color: white;
+    width: 90%;
+    margin: 0 auto 1vh 5%;
 }
 
-#about-content {
+.contact-label {
+    transition-duration: .5s;
+    -webkit-transition-duration: .5s;
+    -moz-transition-duration: .5s;
+    -o-transition-duration: .5s;
+    opacity: 0;
+    margin-left: 5%;
+}
+
+[id^=about-content] {
     font-size: 9pt;
     margin: 0;
 }
 
+[id^=about-content] p {
+    width: 100%;
+    margin-bottom: 10%;
+}
+
 #submit-button {
     width: 70px;
+    margin-top: 1vh;
+    border-radius: 7px;
+    background-color: rgba(13, 51, 57, 0.3); 
+    border: none;
+    color: white;
+    font-size: .9em;
+    padding: 2%;
 }
 
 input {
-    width: 100%;
-    margin: 0 auto 1vh;
+    
+}
+
+input::placeholder {
+    font-size: .8em;
+    font-style: italic;
+    color: white;
+}
+
+input:focus {
+    outline: none;
+    -moz-box-shadow:    inset 0 0 10px rgba(13, 51, 57, 0.6);
+    -webkit-box-shadow: inset 0 0 10px rgba(13, 51, 57, 0.6);
+    box-shadow:         inset 0 0 10px rgba(13, 51, 57, 0.6);
 }
 
 label {
     font-size: .7em;
 }
 
+legend {
+    font-size: 1.4em;
+    margin: 0 auto;
+    color: white;
+}
+
 .center {
     text-align: center;
 }
 
+.logo-button {
+    font-size: 1.5em;
+    white-space: nowrap;
+}
+
+nav {
+    align-items: center;
+}
+
+ul {
+    width: 100%;
+    height: 100%;
+    padding: 3%;
+    justify-content: space-between;
+}
+
+li {
+    display: flex;
+    margin: 0;
+    align-content: center;
+}
+
+.about-button, .home-button, .projects-button, .contact-button {
+    display: none;
+}
+
+#hemburgairrrrr-navbar {
+    width: 100%;
+    height: 5%;
+    padding: 0;
+}
+
+#hemburgairrrrr-content-nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 5%;
+    padding: 0 5%;
+    display: none;
+    background-color: rgba(13, 51, 57, .22); 
+}
+
+#hemburgairrrrr-content-nav ul {
+    margin: auto 0;
+    height: 100%;
+}
+
+#hemburgairrrrr-content-nav li button {
+    margin: 0 auto;
+    font-style: italic;
+    font-size: 1em;
+    line-height: 1em;
+}
+
+.hemburgairrrrr-menu-button {
+    height: 2em;
+    width: 2.5em;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#projects-content-mobile {
+    width: 100%;
+}
+
+.project {
+    height: 100%;
+    margin-bottom: 5%;
+}
+
+.projects-link {
+    margin: 0 6vw;
+}
+
+[class^=app-picture] {
+    width: 100%;
+    
+}
+
+.app-picture1 {
+    height: 40%;
+    border-radius: 10px 10px 0 0;
+    margin: 0;
+}
+
+.app-picture2 {
+    height: 60%;
+    border-radius: 0 0 10px 10px;
+}
+
+h2 {
+    width: 100%;
+    font-size: 5vw;
+    text-align: center;
+    margin: 0 0 2vh 0;
+}
 
 /* For mobile phones: */
 @media only screen and (max-width: 420px) {
-    .logo-button {
-        font-size: 1.5em;
-        white-space: nowrap;
-    }
-
-    nav {
-        align-items: center;
-    }
     
-    ul {
-        width: 100%;
-        height: 100%;
-        padding: 3%;
-        justify-content: space-between;
-    }
-
-    li {
-        display: flex;
-        margin: 0;
-        align-content: center;
-    }
-
-    .about-button, .home-button, .projects-button, .contact-button {
-        display: none;
-    }
-
-    #hemburgairrrrr-navbar {
-        width: 100%;
-        height: 5%;
-        padding: 0;
-    }
-
-    #hemburgairrrrr-content-nav {
-        position: absolute;
-        top: 0;
-        width: 100%;
-        height: 5%;
-        padding: 0 2% 2%;
-        display: none;
-        background-color: rgba(13, 51, 57, .22); 
-    }
-    
-    #hemburgairrrrr-content-nav li button {
-        margin: 0 auto;
-        font-style: italic;
-        font-size: 1.1em;
-        line-height: 1.5em;
-    }
-
-    .hemburgairrrrr-menu-button {
-        height: 2em;
-        width: 2.5em;
-        margin-top: auto;
-        margin-bottom: auto;
-    }
 }

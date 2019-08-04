@@ -13,14 +13,7 @@ function buttonHandler(params) {
         // click trigger bounces to the appropriate section
     // home button
     // $("main").on('click', ".home-button", function() {
-    //     $("header").html(`
-    //         <div role="hero-text" class="hero-text">
-    //             <h1>Audrey Foss</h1>
-    //             <p>Future, expert, full-stack Web Developer based in Minneapolis, MN. 
-    //             Specializing in creative content design, unique strategies, and superb customer service.</p>
-    //         </div>
-    //     `)
-    // })
+    //     $("header").html()
         // trigger the home view in the rendering area when either the logo or the hom button are clicked
 
     // about button
@@ -48,32 +41,14 @@ function buttonHandler(params) {
     // hemburgairrrrr menu button
         // changes background to blurred version
     $("main").on('click', "input.hemburgairrrrr-menu-button", function () {
-        console.log("Hamburger clicked!");
         STORE.hamburgerMenuOpen = !STORE.hamburgerMenuOpen;
-        console.log(STORE.hamburgerMenuOpen);
         if (STORE.hamburgerMenuOpen) {
-            // $("img#background-image").attr("src", "images/kingfisher_heroBG_hexagon_720square.png");
-
-            // $("img#background-image-hexagon").addClass("click-opacity");
-
-            $(".hero-text").addClass("blur-filter");
-
-            // $("img#background").addClass("blur-filter");
-
-            // $(".hero-text p").fadeOut(200, function() {
-
-            // });
-            
+            $("#content-section").addClass("blur-filter");
             $("#hemburgairrrrr-content-nav").fadeIn("slow", function() {
 
         })}
         else {
-            // $("img#background-image").attr("src", "images/kingfisher_heroBG_flippedWide_1440x811.jpg");
-            // $(".hero-text").removeClass("blur-filter");
-            // $(".hero-text p").fadeIn("slow", function() {
-
-            // });
-            $(".hero-text").removeClass("blur-filter");
+            $("#content-section").removeClass("blur-filter");
             $("#hemburgairrrrr-content-nav").fadeOut("slow", function() {
 
             })
@@ -83,6 +58,18 @@ function buttonHandler(params) {
 
     // stretch: add a contact button that causes a pop up over the hero page and changes the background to the blurred version
     
+}
+
+// A function that handles how the contact form functions when text is input vs when the text box is empty
+function contactLabelHandler() {
+    $('.contact-input').keyup(function(){
+        if ($(this).val() == '') {  
+            $(this).prev().css({opacity: 0});
+        }
+        else {
+            $(this).prev().css({opacity: 100});
+        }
+    });
 }
 
 function textFade(params) {
@@ -102,3 +89,4 @@ function viewHandler(params) {
 
 
 buttonHandler();
+contactLabelHandler();
