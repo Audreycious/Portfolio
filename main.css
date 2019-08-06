@@ -105,11 +105,11 @@ footer {
     text-align: center;
     justify-content: space-evenly;
     align-items: center;
+    font-size: 4.4vw;
 }
 
 footer p {
     padding: 1%;
-    font-size: 4.4vw;
     min-width: 40vw;
     white-space: nowrap;
 }
@@ -120,7 +120,6 @@ a {
 }
 
 footer a {
-    font-size: 1.3em;
     white-space: nowrap;
 } 
 
@@ -356,13 +355,18 @@ h2 {
     padding: 1vh .7vw 0 0;
 }
 
-#about-projects-link {
+#projects-button-about-section {
     margin: 0;
     padding: 0;
+    background: transparent;
+    border: none;
+    color: rgba(241, 241, 241, 0.9);
+    font-size: 1em;
 }
 
 a:link {
-    
+    color: white;
+    text-decoration: none;
 }
 
 a:hover {

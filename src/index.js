@@ -1,10 +1,7 @@
 
 const STORE = {
     currentView: null,
-    hamburgerMenuOpen: false,
-    thisFunction: function () {
-        
-    }
+    hamburgerMenuOpen: false
 };
 
 
@@ -72,8 +69,8 @@ function buttonHandler(params) {
         // trigger the hemburgairrrrr menu popup with new hyper links that use the buttons above
 
 
-    $("main").on("click", ".projects-button-about-section", function () {
-        // contentSectionFadeOut();
+    $("main").on("click", "#projects-button-about-section", function () {
+        contentSectionFadeOut();
         if (STORE.hamburgerMenuOpen = true) {
             STORE.hamburgerMenuOpen = !STORE.hamburgerMenuOpen;
             $("#hemburgairrrrr-content-nav").fadeOut("slow", function() {
@@ -93,9 +90,6 @@ function contentSectionFadeOut() {
 
 function contentSectionFadeIn(thisVar) {
     console.log(thisVar.value);
-    if (thisVar.value == "logo-button") {
-        thisVar.value = "home-button";
-    }
     let thisSection = `.${thisVar.value}-section`;
     console.log(thisSection);
     $(thisSection).removeClass("hidden").fadeIn("slow", function() {
