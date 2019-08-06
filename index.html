@@ -20,23 +20,23 @@
     <body>
         <main role="main" class="row">
             <nav role="navigation" class="row">
-                <ul class="row">
-                    <li><button class="logo-button">Kingfisher WebDev</button></li>
-                    <li><button class="home-button">Home</button></li>
-                    <li><button class="about-button">About</button></li>
-                    <li><button class="projects-button">Projects</button></li>
-                    <li><button class="contact-button">Contact</button></li>
-                    <li class="hemburgairrrrr-menu-button"><input class="hemburgairrrrr-menu-button" type="image" src="images\hamburger-menu-icon.png"></input></li>
+                <ul class="row navbar-ul">
+                    <li class="navbar-li"><button class="logo-button navbar-button" value="home">Kingfisher WebDev</button></li>
+                    <li class="navbar-li"><button class="home-button navbar-button" value="home">Home</button></li>
+                    <li class="navbar-li"><button class="about-button navbar-button" value="about">About</button></li>
+                    <li class="navbar-li"><button class="projects-button navbar-button" value="projects">Projects</button></li>
+                    <li class="navbar-li"><button class="contact-button navbar-button" value="contact">Contact</button></li>
+                    <li class="hemburgairrrrr-menu-button navbar-li"><input class="hemburgairrrrr-menu-button" type="image" src="images\hamburger-menu-icon.png"></input></li>
                 </ul>
             </nav>
             <img id="background-image-hexagon" src="images/kingfisher_heroBG_hexagon_720square.png" />
             <div role="render-area" id="render-container">
                 <div role="hemburgairrrrr-content-nav" id="hemburgairrrrr-content-nav" class="row">
-                    <ul id="hemburgairrrrr-navbar" class="row">
-                        <li><button class="home-button-hemburgairrrrr">Home</button></li>
-                        <li><button class="about-button-hemburgairrrrr">About</button></li>
-                        <li><button class="projects-button-hemburgairrrrr">Projects</button></li>
-                        <li><button class="contact-button-hemburgairrrrr">Contact</button></li>
+                    <ul id="hemburgairrrrr-navbar" class="row navbar-ul">
+                        <li class="navbar-li"><button class="home-button-hemburgairrrrr navbar-button" value="home">Home</button></li>
+                        <li class="navbar-li"><button class="about-button-hemburgairrrrr navbar-button" value="about">About</button></li>
+                        <li class="navbar-li"><button class="projects-button-hemburgairrrrr navbar-button" value="projects">Projects</button></li>
+                        <li class="navbar-li"><button class="contact-button-hemburgairrrrr navbar-button" value="contact">Contact</button></li>
                     </ul>   
                 </div>
                 <!-- <div role="hemburgairrrrr-content-box" id="hemburgairrrrr-content-box" class="col">
@@ -48,35 +48,41 @@
                 <header role="content-area" class="row">
                     <div role="content-container" id="content-section">
                         <!-- Home Page View -->
-                        <section id="home-section">
+                        <section id="home-section" class="home-section">
                             <h1>Audrey Foss</h1>
                             <p>Future, expert, full-stack Web Developer based in Minneapolis, MN. 
                             Specializing in creative content design, unique strategies, and superb customer service.</p>
                         </section>
                         
                         <!-- About Page View -->
-                        <section role="about-section" id="about-section" class="hidden">
+                        <section role="about-section" id="about-section" class="about-section hidden">
+                            <img src="images\AudreyFoss_headshot_oval.png" alt="Audrey Foss' headshot photo" id="headshot-photo">
                             <!-- About Page Desktop View -->
-                            <div class="page720 about-section" role="desktop-about-content">
+                            <div class="about-content" role="desktop-about-content">
                                 <p>After achieving personal goals in my business career and marriage to my amazing wife, I joined Thinkful to pursue my passion for tech; specifically for:</p> 
-                                <li>○ Working with clients, listening to fulfill their needs</li>
-                                <li>○ Designing a unique experience with each project</li>
-                                <li>○ Building creative solutions with forward thinking</li>
-                                <li>○ Being proud of the content I can put out</li>
-                                
-                                <p>While I am passionate about learning and seeking answers, which can be seen in my <a href="#">Projects</a>, I am also a fastidious planner with great communication skills to set your milestones and meet your deadlines. I am the full-stack real-deal.
-                            
-                                I enjoy spending my free time biking around Minneapolis, cooking ~ 'chopped'-style, and playing weekly, unnecessarily-complicated board games with friends.</p>
+                                <ul id="about-content-list" class="col">
+                                    <li>Working with clients, listening to fulfill their needs</li>
+                                    <li>Designing a unique experience with each project</li>
+                                    <li>Building creative solutions with forward thinking</li>
+                                    <li>Being proud of the content I can put out</li>
+                                </ul>
+                                <br />
+                                <p>While I am passionate about learning and seeking answers, which can be seen in my <a id="about-projects-link" href="#">Projects</a>, I am also a fastidious planner with great communication skills to set your milestones and meet your deadlines. I am the full-stack real-deal.
+                                <br />
+                                <br />
+                                I enjoy spending my free time biking around Minneapolis, cooking: 'chopped'-style, and playing weekly, unnecessarily-complicated board games with friends.</p>
                             </div>
 
                             <!-- About Page Mobile View -->
-                            <div role="about-section-mobile" id="about-section-mobile" class="about-section">
+                            <!-- <div role="about-section-mobile" id="about-section-mobile" class="about-content">
                                 <p>After achieving personal goals in business and marriage, I joined Thinkful to pursue my passion for tech. I especially enjoy working with clients, designing unique experiences with each project, building creative solutions with forward thinking, and being proud of the content I can put out.
-                                <br>
+                                <br />
+                                <br />
                                 <p>While I am passionate about learning and seeking answers, which can be seen in my <a href="#">Projects</a>. I am also a fastidious planner with great communication skills to set your milestones and meet your deadlines. I am the full-stack real-deal.
-                            
+                                <br />
+                                <br />
                                 I enjoy spending my free time biking around Minneapolis, cooking, and board games with friends.</p>
-                            </div>
+                            </div> -->
                         </section>
 
                         <!-- Projects Page Mobile View -->
@@ -143,8 +149,12 @@
                 </header>
             </div>
         </main>     
-        <footer role="content-info" id="footer" class="">
-            <p style="margin: auto; font-size: 10pt; font-style: italic; width: 80;">My work speaks for itself.</p>
+        <footer role="content-info" id="footer" class="row">
+            <a href="mailto:AFossWebDev@gmail.com?subject=I'm interested in KingFisher WebDev" id="email-hyperlink">Email Us</a>
+            <p id="footer-address" class="center">Est. 2019<br />
+                Minneapolis, MN
+            </p>
+            <a href="tel:+17632216510" id="phone-hyperlink">Call Us</a>
         </footer>
     </body>
     <script type="text/javascript" src="src\index.js"></script>

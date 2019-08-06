@@ -1,6 +1,10 @@
 
 const STORE = {
-    currentView: null
+    currentView: null,
+    hamburgerMenuOpen: false,
+    thisFunction: function () {
+        
+    }
 };
 
 
@@ -11,58 +15,42 @@ function buttonHandler(params) {
     // Home Page View
     $("main").on('click', "[class^=home-button]", function() {
         console.log("Home clicked!");
-        $("#content-section").children().fadeOut("slow", function() {
-
-        });
-        $("#home-section").removeClass("hidden").fadeIn("slow", function() {
-
-        });
+        contentSectionFadeOut();
+        contentSectionFadeIn(event.target);
         blurHandler();
     })
 
     // logo button
     $("main").on('click', "[class^=logo-button]", function() {
         console.log("Logo clicked!");
-        $("#content-section").children().fadeOut("slow", function() {
-
-        });
-        $("#home-section").removeClass("hidden").fadeIn("slow", function() {
-
-        });
+        contentSectionFadeOut();
+        if (STORE.hamburgerMenuOpen) {
+            STORE.hamburgerMenuOpen = !STORE.hamburgerMenuOpen;
+            blurOut();
+        }
+        contentSectionFadeIn(event.target);
     })
 
     // about button
     $("main").on('click', "[class^=about-button]", function() {
         console.log("About clicked!");
-        $("#content-section").children().fadeOut("slow", function() {
-
-        });
-        $("#about-section").removeClass("hidden").fadeIn("slow", function() {
-
-        });
+        contentSectionFadeOut();
+        contentSectionFadeIn(event.target);
         blurHandler();
     })
 
     // projects button
     $("main").on('click', "[class^=projects-button]", function() {
         console.log("Projects clicked!");
-        $("#content-section").children().fadeOut("slow", function() {
-
-        });
-        $("#projects-section").removeClass("hidden").fadeIn("slow", function() {
-
-        });
+        contentSectionFadeOut();
+        contentSectionFadeIn(event.target);
         blurHandler();
     })
 
     $("main").on('click', "[class^=contact-button]", function() {
         console.log("Contact clicked!");
-        $("#content-section").children().fadeOut("slow", function() {
-
-        });
-        $("#contact-section").removeClass("hidden").fadeIn("slow", function() {
-
-        });
+        contentSectionFadeOut();
+        contentSectionFadeIn(event.target);
         blurHandler();
     })
 
@@ -83,6 +71,26 @@ function buttonHandler(params) {
     })
         // trigger the hemburgairrrrr menu popup with new hyper links that use the buttons above
 
+}
+
+function contentSectionFadeOut() {
+    $("#content-section").children().fadeOut(200, function() {
+
+    });
+    return;
+}
+
+function contentSectionFadeIn(thisVar) {
+    console.log(thisVar.value);
+    if (thisVar.value == "logo-button") {
+        thisVar.value = "home-button";
+    }
+    let thisSection = `.${thisVar.value}-section`;
+    console.log(thisSection);
+    $(thisSection).removeClass("hidden").fadeIn("slow", function() {
+
+    });
+    return;
 }
 
 // A function that handles how the contact form functions when text is input vs when the text box is empty
