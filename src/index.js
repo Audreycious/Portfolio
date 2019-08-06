@@ -21,7 +21,7 @@ function buttonHandler(params) {
     $("main").on('click', "[class^=logo-button]", function() {
         console.log("Logo clicked!");
         contentSectionFadeOut();
-        if (STORE.hamburgerMenuOpen) {
+        if (STORE.hamburgerMenuOpen) { 
             STORE.hamburgerMenuOpen = !STORE.hamburgerMenuOpen;
             blurOut();
         }
@@ -78,6 +78,10 @@ function buttonHandler(params) {
             });
         }
         contentSectionFadeIn(event.target);
+    })
+
+    $("#contact-form").on("submit", function () {
+        event.preventDefault();
     })
 }
 
