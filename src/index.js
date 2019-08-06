@@ -71,6 +71,17 @@ function buttonHandler(params) {
     })
         // trigger the hemburgairrrrr menu popup with new hyper links that use the buttons above
 
+
+    $("main").on("click", ".projects-button-about-section", function () {
+        // contentSectionFadeOut();
+        if (STORE.hamburgerMenuOpen = true) {
+            STORE.hamburgerMenuOpen = !STORE.hamburgerMenuOpen;
+            $("#hemburgairrrrr-content-nav").fadeOut("slow", function() {
+
+            });
+        }
+        contentSectionFadeIn(event.target);
+    })
 }
 
 function contentSectionFadeOut() {

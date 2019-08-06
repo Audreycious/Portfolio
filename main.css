@@ -365,6 +365,10 @@ a:link {
     
 }
 
+a:hover {
+    cursor: pointer;
+}
+
 
 
 
