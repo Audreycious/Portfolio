@@ -328,6 +328,11 @@ legend {
     width: 100%;
 }
 
+a[class^=app-picture] {
+    margin: 0;
+    padding: 0;
+}
+
 .app-picture1 {
     height: 40%;
     border-radius: 10px 10px 0 0;
