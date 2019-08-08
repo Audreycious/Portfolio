@@ -14,7 +14,9 @@ function buttonHandler(params) {
         console.log("Home clicked!");
         contentSectionFadeOut();
         contentSectionFadeIn(event.target);
-        blurHandler();
+        if (!$(event.target).hasClass("page420")) {
+            blurHandler();
+        }
     })
 
     // logo button
@@ -33,7 +35,9 @@ function buttonHandler(params) {
         console.log("About clicked!");
         contentSectionFadeOut();
         contentSectionFadeIn(event.target);
-        blurHandler();
+        if (!$(event.target).hasClass("page420")) {
+            blurHandler();
+        }
     })
 
     // projects button
@@ -41,14 +45,18 @@ function buttonHandler(params) {
         console.log("Projects clicked!");
         contentSectionFadeOut();
         contentSectionFadeIn(event.target);
-        blurHandler();
+        if (!$(event.target).hasClass("page420")) {
+            blurHandler();
+        }
     })
 
     $("main").on('click', "[class^=contact-button]", function() {
         console.log("Contact clicked!");
         contentSectionFadeOut();
         contentSectionFadeIn(event.target);
-        blurHandler();
+        if (!$(event.target).hasClass("page420")) {
+            blurHandler();
+        }
     })
 
     // email button

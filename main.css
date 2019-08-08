@@ -106,6 +106,7 @@ footer {
     justify-content: space-evenly;
     align-items: center;
     font-size: 4.4vw;
+    padding: 0 2vw;
 }
 
 footer p {
@@ -124,16 +125,18 @@ footer a {
 } 
 
 #about-content-list {
-    padding: 2% 0 0 2%;
-    font-size: .8em;
-    line-height: 1.3em;
-    height: 20vh;
+    margin: 2% 0;
+    font-size: 4vw;
+    line-height: 2.4vh;
+    min-height: 25vh;
     justify-content: space-around;
 }
 
 #about-content-list li {
     display: list-item;
     list-style-type: circle;
+    padding: 1vh 0 .5vh 2vw;
+    font-style: italic;
 }
 
 header {
@@ -211,8 +214,9 @@ h1 {
 
 .about-content p {
     width: 100%;
-    font-size: .9em;
-    margin: 0;
+    font-size: 4.4vw;
+    margin: 0 0 2% 0;
+    line-height: 2.8vh;
 }
 
 #submit-button {
@@ -295,10 +299,12 @@ legend {
 }
 
 .hemburgairrrrr-menu-button {
-    height: 2em;
-    width: 2.5em;
+    height: 7vw;
+    width: 9vw;
     margin-top: auto;
     margin-bottom: auto;
+    transition: all .3s ease;
+    transform: scale(1);
 }
 
 #projects-content-mobile {
@@ -334,13 +340,13 @@ a[class^=app-picture] {
 }
 
 .app-picture1 {
-    height: 40%;
+    height: 17vh;
     border-radius: 10px 10px 0 0;
     margin: 0;
 }
 
 .app-picture2 {
-    height: 60%;
+    height: 23vh;
     border-radius: 0 0 10px 10px;
 }
 
@@ -357,7 +363,7 @@ h2 {
     height: 30vw;
     float: right;
     margin: 0 .7vw 0 0;
-    padding: 1vh .7vw 0 0;
+    padding: 1vh .7vw 0;
 }
 
 #projects-button-about-section {
@@ -365,18 +371,25 @@ h2 {
     padding: 0;
     background: transparent;
     border: none;
-    color: rgba(241, 241, 241, 0.9);
-    font-size: 1em;
+    color: rgb(13, 51, 57);
+    font-size: 4.4vw;
 }
 
 a:link {
-    color: white;
     text-decoration: none;
+    border: none;
+    color: white;
+    transition: 0.3s;
 }
 
-a:hover {
+a:hover, .logo-button:hover  {
     cursor: pointer;
+    text-shadow: 8px 8px 16px black;
 }
+
+/* .hemburgairrrrr-menu-button:hover {
+    transform: scale(1.1) perspective(.5px)
+} */
 
 
 
@@ -386,8 +399,12 @@ a:hover {
 
 
 /* For mobile phones: */
-@media only screen and (max-width: 719px) {
-    .page720 {
-        display: none !important;
+@media only screen and (min-width: 420px) {
+    .about-button, .home-button, .projects-button, .contact-button {
+        display: list-item;
+    }
+
+    #hemburgairrrrr-content-nav, .hemburgairrrrr-menu-button {
+        display: none;
     }
 }
