@@ -45,17 +45,20 @@ main {
 }
 
 #render-container {
-    width: 100%;
+    width: 150%;
+    background-image: url("images/kingfisher_heroBG_hexagon_720square.png");
+    background-size: cover;
 }
 
 #background-image-hexagon {
     z-index: -2;
     opacity: 0.85;
-    min-width: 100%;
+    max-height: 80%;
+    height: auto;
 }
 
 nav { 
-    width: 100%;
+    width: 100vw;
     height: 10%;
     justify-content: space-between;
     align-items: center;
@@ -65,9 +68,10 @@ li {
     display: list-item;    
 }
 
-[class^=navbar-] {
-    /* align-content: center; */
-}
+/* [class^=navbar-] {
+    align-content: center;
+} */
+
 .navbar-ul {
     width: 100%;
     height: 100%;
@@ -145,9 +149,11 @@ header {
 }
 
 #content-section {
-    margin: 17vh auto auto 43vw;
-    height: 50vh;
-    width: 50%;
+    top: 14vh;
+    left: 73vw;;
+    height: 55vh;
+    max-height: 500px;
+    width: 47vw;
     color: rgba(241, 241, 241, 0.9);
     transition-duration: 1s;
     -webkit-transition-duration: 1s;
@@ -156,18 +162,21 @@ header {
     overflow: auto;
     box-shadow: none;
     position: absolute;
+    padding: 3vh 1vw;
 }
 
 p {
     font-size: 4vw;
     line-height: 4.5vw;
-    width: 90%;
     margin: 0;
     color: rgba(241, 241, 241, 0.9);
 }
 
 #home-section h1 {
     margin: 20px 0;
+    width: auto;
+    white-space: nowrap;
+    font-size: 8vw;
 }
 
 section {
@@ -176,13 +185,6 @@ section {
 
 h1, h2, li button  {
     font-family: 'Lato', sans-serif;
-}
-
-h1 {
-    margin: 0;
-    white-space: nowrap;
-    font-size: 1.8em;
-    /* font-style: italic; */
 }
 
 .blur-filter {
@@ -210,6 +212,10 @@ h1 {
     -o-transition-duration: .5s;
     opacity: 0;
     margin-left: 5%;
+}
+
+#contact-section {
+    padding-top: 7vh;
 }
 
 .about-content p {
@@ -280,8 +286,9 @@ legend {
     position: absolute;
     top: 0;
     width: 100%;
+    margin: 0 auto;
     height: 5%;
-    padding: 0 5%;
+    padding: 0 20%;
     display: none;
     background-color: rgba(13, 51, 57, .22); 
 }
@@ -387,9 +394,9 @@ a:hover, .logo-button:hover  {
     text-shadow: 8px 8px 16px black;
 }
 
-/* .hemburgairrrrr-menu-button:hover {
+.hemburgairrrrr-menu-button:hover {
     transform: scale(1.1) perspective(.5px)
-} */
+}
 
 
 
@@ -402,7 +409,10 @@ a:hover, .logo-button:hover  {
 @media only screen and (min-width: 420px) {
     .about-button, .home-button, .projects-button, .contact-button {
         display: list-item;
+        font-size: 3vw;
     }
+
+    
 
     #hemburgairrrrr-content-nav, .hemburgairrrrr-menu-button {
         display: none;

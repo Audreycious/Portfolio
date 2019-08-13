@@ -78,6 +78,7 @@ function buttonHandler(params) {
 
 
     $("main").on("click", "#projects-button-about-section", function () {
+        $('#content-section').animate({scrollTop: 0}, "slow");
         contentSectionFadeOut();
         if (STORE.hamburgerMenuOpen = true) {
             STORE.hamburgerMenuOpen = !STORE.hamburgerMenuOpen;
