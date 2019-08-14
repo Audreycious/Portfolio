@@ -10,6 +10,7 @@ html, body {
     bottom:0;
     left:0;
     right:0;
+    height: 100vh;
 }
 
 body {
@@ -38,9 +39,9 @@ main {
 
 #render-container, #background-image-hexagon {
     position: absolute;
-    height: 80%;
-    top: 50%;
-    left: 50%;
+    height: 80vh;
+    top: 50vh;
+    left: 50vw;
     transform: translate(-50%, -50%);
 }
 
@@ -74,7 +75,6 @@ li {
 
 .navbar-ul {
     width: 100%;
-    height: 100%;
     padding: 3%;
     justify-content: space-between;
     align-content: center;
@@ -89,11 +89,15 @@ li {
     height: 100%;
     list-style: none;
     color: rgba(241, 241, 241, 0.9);
-    background:none;
-    border:none;
-    margin:0;
-    padding:0;
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
     cursor: pointer;
+    -webkit-transition: 0.5s all ease;
+    -moz-transition: 0.5s all ease;
+    -o-transition: 0.5s all ease;
+    transition: 0.5s all ease;
 }
 
 ul {
@@ -113,10 +117,14 @@ footer {
     padding: 0 2vw;
 }
 
-footer p {
+#footer-address {
     padding: 1%;
     min-width: 40vw;
     white-space: nowrap;
+    color: gray;
+    text-shadow: 2px 2px 2px 2px gray;
+    font-size: 2.5vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 a {
@@ -139,6 +147,7 @@ footer a {
 #about-content-list li {
     display: list-item;
     list-style-type: circle;
+    line-height: 3vh;
     padding: 1vh 0 .5vh 2vw;
     font-style: italic;
 }
@@ -149,11 +158,11 @@ header {
 }
 
 #content-section {
-    top: 14vh;
+    top: 18vh;
     left: 73vw;;
     height: 55vh;
-    max-height: 500px;
-    width: 47vw;
+    max-height: 60vh;
+    width: 44vw;
     color: rgba(241, 241, 241, 0.9);
     transition-duration: 1s;
     -webkit-transition-duration: 1s;
@@ -162,14 +171,14 @@ header {
     overflow: auto;
     box-shadow: none;
     position: absolute;
-    padding: 3vh 1vw;
 }
 
-p {
+#home-section p {
     font-size: 4vw;
-    line-height: 4.5vw;
+    line-height: 4vh;
     margin: 0;
     color: rgba(241, 241, 241, 0.9);
+    text-align: center;
 }
 
 #home-section h1 {
@@ -222,7 +231,7 @@ h1, h2, li button  {
     width: 100%;
     font-size: 4.4vw;
     margin: 0 0 2% 0;
-    line-height: 2.8vh;
+    line-height: 3vh;
 }
 
 #submit-button {
@@ -246,11 +255,12 @@ input::placeholder {
     color: white;
 }
 
-:focus {
+button:focus {
     outline: none;
-    -moz-box-shadow:    inset 0 0 10px rgba(13, 51, 57, 0.6);
-    -webkit-box-shadow: inset 0 0 10px rgba(13, 51, 57, 0.6);
-    box-shadow:         inset 0 0 10px rgba(13, 51, 57, 0.6);
+    -moz-text-shadow:    10px 10px 40px black;
+    -webkit-text-shadow: 10px 10px 40px black;   
+    text-shadow:         10px 10px 40px black;
+    border: 1px rgba(241, 241, 241, 0.9) transparent;
 }
 
 label {
@@ -347,13 +357,13 @@ a[class^=app-picture] {
 }
 
 .app-picture1 {
-    height: 17vh;
+    height: 17vw;
     border-radius: 10px 10px 0 0;
     margin: 0;
 }
 
 .app-picture2 {
-    height: 23vh;
+    height: 23vw;
     border-radius: 0 0 10px 10px;
 }
 
@@ -368,8 +378,7 @@ h2 {
 #headshot-photo {
     width: 22.87vw;
     height: 30vw;
-    float: right;
-    margin: 0 .7vw 0 0;
+    margin: 0 auto 0 11vw;
     padding: 1vh .7vw 0;
 }
 
@@ -389,7 +398,7 @@ a:link {
     transition: 0.3s;
 }
 
-a:hover, .logo-button:hover  {
+a:hover, button:hover  {
     cursor: pointer;
     text-shadow: 8px 8px 16px black;
 }
@@ -417,4 +426,22 @@ a:hover, .logo-button:hover  {
     #hemburgairrrrr-content-nav, .hemburgairrrrr-menu-button {
         display: none;
     }
+}
+
+@media only screen and (min-width: 720px) {
+    .logo-button {
+        font-size: 4vw;
+        
+    }
+    
+    #right-container {
+        justify-content: space-between;
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 721px) {
+    /* html {
+        display: none;
+    } */
 }
