@@ -58,7 +58,9 @@
                         
                         <!-- About Page View -->
                         <section role="about-section" id="about-section" class="about-section hidden">
-                            <img src="images\AudreyFoss_headshot_oval.png" alt="Audrey Foss' headshot photo" id="headshot-photo">
+                            <div role="img-container" class="img-container row"> 
+                                <img src="images\AudreyFoss_headshot_oval.png" alt="Audrey Foss' headshot photo" id="headshot-photo">
+                            </div>
                             <!-- About Page Desktop View -->
                             <div class="about-content" role="desktop-about-content">
                                 <p>After achieving personal goals in both my career and marriage to my amazing wife, I joined Thinkful to pursue my passion for tech; specifically for:</p> 
@@ -69,7 +71,7 @@
                                     <li>Being proud of the content I produce</li>
                                 </ul>
                                 <br />
-                                <p>While I am passionate about learning and seeking answers, which can be seen in my <button id="projects-button-about-section" value="projects">Projects</button>, I am also a fastidious planner with great communication skills to set your milestones and meet your deadlines. I am the full-stack real-deal.
+                                <p>While I am passionate about learning and seeking answers, which can be seen in my <button id="projects-button-about-section" class="projects-button-about-section" value="projects">Projects</button>, I am also a fastidious planner with great communication skills to set your milestones and meet your deadlines. I am the full-stack real-deal.
                                 <br />
                                 <br />
                                 I enjoy spending my free time biking around Minneapolis, cooking: 'chopped'-style, and playing weekly, unnecessarily-complicated board games with friends.</p>
@@ -141,11 +143,13 @@
             </div>
         </main>     
         <footer role="content-info" id="footer" class="row">
-            <a href="mailto:AFossWebDev@gmail.com?subject=I'm interested in KingFisher WebDev" id="email-hyperlink">Email</a>
-            <p id="footer-address" class="center">Est. 2019<br />
-                Minneapolis, MN
-            </p>
-            <a href="tel:+17632216510" id="phone-hyperlink">Call</a>
+            <div role="footer-container" id="footer-container" class="row">
+                <a href="mailto:AFossWebDev@gmail.com?subject=I'm interested in KingFisher WebDev" id="email-hyperlink">Email</a>
+                <p id="footer-address" class="center">Est. 2019<br />
+                    Minneapolis, MN
+                </p>
+                <a href="tel:+17632216510" id="phone-hyperlink">Call</a>
+            </div>
         </footer>
     </body>
     <script type="text/javascript" src="src\index.js"></script>

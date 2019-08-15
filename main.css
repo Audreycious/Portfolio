@@ -10,7 +10,7 @@ html, body {
     bottom:0;
     left:0;
     right:0;
-    height: 100vh;
+
 }
 
 body {
@@ -37,31 +37,21 @@ main {
     align-content: center;
 }
 
-#render-container, #background-image-hexagon {
+#render-container {
     position: absolute;
     height: 80vh;
     top: 50vh;
     left: 50vw;
     transform: translate(-50%, -50%);
-}
-
-#render-container {
     width: 150%;
     background-image: url("images/kingfisher_heroBG_hexagon_720square.png");
     background-size: cover;
 }
 
-#background-image-hexagon {
-    z-index: -2;
-    opacity: 0.85;
-    max-height: 80%;
-    height: auto;
-}
-
 nav { 
     width: 100vw;
     height: 10%;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 } 
 
@@ -69,9 +59,9 @@ li {
     display: list-item;    
 }
 
-/* [class^=navbar-] {
-    align-content: center;
-} */
+.navbar-ul {
+    max-width: 150vh;
+}
 
 .navbar-ul {
     width: 100%;
@@ -106,15 +96,19 @@ ul {
 }
 
 footer {
-    width: 100%;
+    width: 100vw;
     height: 10%;
     position: fixed;
     bottom: 0;
-    text-align: center;
-    justify-content: space-evenly;
+    left: 50%;
+    margin-left: -50vw;
+    justify-content: center;
+    font-size: 5vw;
+}
+
+#footer-container {   
     align-items: center;
-    font-size: 4.4vw;
-    padding: 0 2vw;
+    justify-content: space-between;
 }
 
 #footer-address {
@@ -123,8 +117,12 @@ footer {
     white-space: nowrap;
     color: gray;
     text-shadow: 2px 2px 2px 2px gray;
-    font-size: 2.5vw;
+    font-size: 4vw;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p {
+    margin: 0;
 }
 
 a {
@@ -138,16 +136,14 @@ footer a {
 
 #about-content-list {
     margin: 2% 0;
-    font-size: 4vw;
-    line-height: 2.4vh;
     min-height: 25vh;
+    font-size: .85em;
     justify-content: space-around;
 }
 
 #about-content-list li {
     display: list-item;
     list-style-type: circle;
-    line-height: 3vh;
     padding: 1vh 0 .5vh 2vw;
     font-style: italic;
 }
@@ -163,6 +159,7 @@ header {
     height: 55vh;
     max-height: 60vh;
     width: 44vw;
+    max-width: 66vh;
     color: rgba(241, 241, 241, 0.9);
     transition-duration: 1s;
     -webkit-transition-duration: 1s;
@@ -175,21 +172,21 @@ header {
 
 #home-section p {
     font-size: 4vw;
-    line-height: 4vh;
+    line-height: 1em;
     margin: 0;
     color: rgba(241, 241, 241, 0.9);
     text-align: center;
 }
 
 #home-section h1 {
-    margin: 20px 0;
-    width: auto;
+    margin: 20px auto;
+    text-align: center;
     white-space: nowrap;
-    font-size: 8vw;
+    font-size: 7vw;
 }
 
 section {
-    position: absolute;
+    width: 100%;
 }
 
 h1, h2, li button  {
@@ -224,14 +221,14 @@ h1, h2, li button  {
 }
 
 #contact-section {
-    padding-top: 7vh;
+    padding-top: 5vh;
 }
 
-.about-content p {
+.about-content {
     width: 100%;
-    font-size: 4.4vw;
+    font-size: 4.4em;
     margin: 0 0 2% 0;
-    line-height: 3vh;
+    line-height: 1em;
 }
 
 #submit-button {
@@ -250,16 +247,16 @@ input, button {
 }
 
 input::placeholder {
-    font-size: .8em;
+    font-size: 2.4vh;
     font-style: italic;
     color: white;
 }
 
-button:focus {
+button:focus, a:focus {
     outline: none;
-    -moz-text-shadow:    10px 10px 40px black;
-    -webkit-text-shadow: 10px 10px 40px black;   
-    text-shadow:         10px 10px 40px black;
+    -moz-text-shadow:    10px 10px 40px white;
+    -webkit-text-shadow: 10px 10px 40px white;   
+    text-shadow:         10px 10px 40px white;
     border: 1px rgba(241, 241, 241, 0.9) transparent;
 }
 
@@ -268,7 +265,7 @@ label {
 }
 
 legend {
-    font-size: 1.4em;
+    font-size: 6vw;
     margin: 0 auto;
     color: white;
 }
@@ -333,22 +330,25 @@ legend {
     margin-bottom: 10%;
 }
 
+.projects-link, .projects-header {
+    padding: 0 15%;
+}
+
 .projects-header {
     text-align: center;
 }
 
 .project p {
-    font-size: .7em;
-    padding: 0 7% 5%;
-    margin: 0 auto;
+    font-size: 2vh;
+    padding: 5%;
+    text-align: center;
+    margin: 0;
 }
 
-.projects-link {
-    margin: 0 6vw;
-}
-
-[class^=app-picture] {
+[class^=app-picture], a[class^=app-picture] {
     width: 100%;
+   
+    text-align: center;
 }
 
 a[class^=app-picture] {
@@ -357,28 +357,37 @@ a[class^=app-picture] {
 }
 
 .app-picture1 {
-    height: 17vw;
+    height: 26vh;
+    max-height: 100px;
     border-radius: 10px 10px 0 0;
     margin: 0;
 }
 
 .app-picture2 {
-    height: 23vw;
+    height: 38vh;
+    max-height: 150px;
     border-radius: 0 0 10px 10px;
 }
 
 h2 {
     width: 100%;
-    font-size: 5vw;
+    font-size: 1.7em;
     text-align: center;
     margin: 0;
     padding: 2%;
 }
 
+.img-container {
+    width: 100%;
+    justify-content: center;
+}
+
 #headshot-photo {
     width: 22.87vw;
     height: 30vw;
-    margin: 0 auto 0 11vw;
+    max-width: 228px;
+    max-height: 300px;
+    margin: 0 auto;
     padding: 1vh .7vw 0;
 }
 
@@ -388,7 +397,7 @@ h2 {
     background: transparent;
     border: none;
     color: rgb(13, 51, 57);
-    font-size: 4.4vw;
+    font-size: .85em;
 }
 
 a:link {
@@ -428,20 +437,76 @@ a:hover, button:hover  {
     }
 }
 
-@media only screen and (min-width: 720px) {
+@media only screen and (min-width: 421px) {
     .logo-button {
-        font-size: 4vw;
-        
+        font-size: 5vw;
     }
-    
+
     #right-container {
         justify-content: space-between;
-        width: 50%;
+        width: 45vw;
+        max-width: 350px;
+    }
+
+    #render-container {
+        background-image: url("images/kingfisher_heroBG_hexagon_flippedWide_1440x811.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+    }
+
+    h2 {
+        font-size: 5vh;
+    }
+
+    .app-picture1 {
+        height: 26vh;
+        max-height: 300px;
+        border-radius: 10px 10px 0 0;
+        margin: 0;
+    }
+    
+    .app-picture2 {
+        height: 38vh;
+        max-height: 450px;
+        border-radius: 0 0 10px 10px;
+    }
+
+    footer {
+        font-size: 5vh;
+    }
+
+    .about-content {
+        font-size: 3.5vh;
     }
 }
 
-@media only screen and (min-width: 721px) {
-    /* html {
-        display: none;
-    } */
+@media only screen and (min-width: 720px) {
+    .logo-button {
+        font-size: 3.5vh;
+    }
+
+    .about-button, .home-button, .projects-button, .contact-button {
+        font-size: 2.5vh;
+    }
+
+    legend {
+        font-size: 5.5vh;
+    }
+
+    #home-section p {
+        font-size: 4vh;
+    }
+
+    #right-container {
+        max-width: 450px;
+    }
+
+    #footer-address {
+        font-size: 3vh;
+    }
+
+    #home-section h1 {
+        font-size: 8vh;
+    }
 }

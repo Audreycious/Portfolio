@@ -59,34 +59,29 @@ function buttonHandler(params) {
         }
     })
 
-    // email button
-    // $("body").on('click', ".email-button")
-        // trigger the the creation of a new email when email hyperlink is clicked
-            // add a subject of "I'm interested in your services"
-
-    // phone number button
-    // $("body").on('click', ".phone-button")
-        // trigger the calling with the set up calling service when the phone number is clicked
-            // stretch - if no set up calling service, ask to send it to your phone as a text
-
     // hemburgairrrrr menu button
         // changes background to blurred version
     $("main").on('click', "input.hemburgairrrrr-menu-button",  function () {
         blurHandler()
     })
-        // trigger the hemburgairrrrr menu popup with new hyper links that use the buttons above
 
-
-    $("main").on("click", "#projects-button-about-section", function () {
+    $("main").on("click", "button", function () {
         $('#content-section').animate({scrollTop: 0}, "slow");
-        contentSectionFadeOut();
-        if (STORE.hamburgerMenuOpen = true) {
+        console.log(event.target);
+        if (STORE.hamburgerMenuOpen) {
             STORE.hamburgerMenuOpen = !STORE.hamburgerMenuOpen;
             $("#hemburgairrrrr-content-nav").fadeOut("slow", function() {
 
             });
         }
-        contentSectionFadeIn(event.target);
+        if ($(event.target).hasClass("projects-button-about-section")) {
+            contentSectionFadeOut();
+            $(".projects-section").removeClass("hidden").fadeIn("slow", function() {
+
+            });
+            $("#content-section").removeClass("blur-filter");
+
+        }
     })
 
     $("#contact-form").on("submit", function () {
@@ -147,16 +142,12 @@ function blurOut() {
     });
 }
 
+
+
 function textFade(params) {
     // fade the hero text in from left to right when the home page loads
     // return
 }
-
-
-
-
-
-
 
 function viewHandler(params) {
     // being mindful for future development where I can have all the views load dynamically when the buttons are pressed. Would remove the bounce down button at that time.
