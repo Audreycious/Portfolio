@@ -226,7 +226,6 @@ h1, h2, li button  {
 
 .about-content {
     width: 100%;
-    font-size: 4.4em;
     margin: 0 0 2% 0;
     line-height: 1em;
 }
@@ -247,7 +246,7 @@ input, button {
 }
 
 input::placeholder {
-    font-size: 2.4vh;
+    font-size: 3vw;
     font-style: italic;
     color: white;
 }
@@ -330,19 +329,24 @@ legend {
     margin-bottom: 10%;
 }
 
-.projects-link, .projects-header {
-    padding: 0 15%;
+.projects-link {
+    text-align: center;
 }
 
 .projects-header {
     text-align: center;
+    margin-bottom: 1vh;
 }
 
 .project p {
     font-size: 2vh;
-    padding: 5%;
+    padding: 2%;
     text-align: center;
     margin: 0;
+}
+
+.projects-github-link {
+    font-size: 4vw;
 }
 
 [class^=app-picture], a[class^=app-picture] {
@@ -400,11 +404,22 @@ h2 {
     font-size: .85em;
 }
 
+#contact-link-container {
+    width: 100%;
+    margin: 1vh 0 0 0;
+    justify-content: space-around;
+    font-size: 5vw;
+}
+
 a:link {
     text-decoration: none;
     border: none;
     color: white;
     transition: 0.3s;
+}
+
+a:visited {
+    color: white;
 }
 
 a:hover, button:hover  {
@@ -476,8 +491,16 @@ a:hover, button:hover  {
         font-size: 5vh;
     }
 
+    #contact-link-container {
+        font-size: 4vh;
+    }
+
     .about-content {
         font-size: 3.5vh;
+    }
+
+    .projects-github-link {
+        font-size: 3vh;
     }
 }
 
@@ -504,9 +527,5 @@ a:hover, button:hover  {
 
     #footer-address {
         font-size: 3vh;
-    }
-
-    #home-section h1 {
-        font-size: 8vh;
     }
 }
