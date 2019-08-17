@@ -14,10 +14,6 @@ html, body {
 }
 
 body {
-    /* background-image: url("./images/kingfisher_heroBG_flippedWide_1440x811.jpg");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;*/
     background-color: rgba(13, 51, 57, 0.8); 
 }
 
@@ -109,15 +105,16 @@ footer {
 #footer-container {   
     align-items: center;
     justify-content: space-between;
+    width: 80vmin;
 }
 
 #footer-address {
     padding: 1%;
-    min-width: 40vw;
+    min-width: 20vmin;
     white-space: nowrap;
     color: gray;
     text-shadow: 2px 2px 2px 2px gray;
-    font-size: 4vw;
+    font-size: 4vmin;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -136,7 +133,6 @@ footer a {
 
 #about-content-list {
     margin: 2% 0;
-    min-height: 25vh;
     font-size: .85em;
     justify-content: space-around;
 }
@@ -155,38 +151,42 @@ header {
 
 #content-section {
     top: 18vh;
-    left: 73vw;;
-    height: 55vh;
-    max-height: 60vh;
-    width: 44vw;
-    max-width: 66vh;
+    left: 73vw;
+    height: 66vmin;
+    max-height: 55vh;
+    min-height: 50vh;
+    width: 44vmin;
     color: rgba(241, 241, 241, 0.9);
-    transition-duration: 1s;
-    -webkit-transition-duration: 1s;
-    -moz-transition-duration: 1s;
-    -o-transition-duration: 1s;
+    -webkit-transition: 0.5s all ease;
+    -moz-transition: 0.5s all ease;
+    -o-transition: 0.5s all ease;
+    transition: 0.5s all ease;
     overflow: auto;
     box-shadow: none;
     position: absolute;
 }
 
 #home-section p {
-    font-size: 4vw;
-    line-height: 1em;
+    font-size: 4vmin;
+    line-height: 5vmin;
     margin: 0;
     color: rgba(241, 241, 241, 0.9);
     text-align: center;
 }
 
 #home-section h1 {
-    margin: 20px auto;
+    margin: 2vh auto;
     text-align: center;
     white-space: nowrap;
-    font-size: 7vw;
+    font-size: 7vmin;
 }
 
 section {
     width: 100%;
+}
+
+.float-section {
+    position: absolute; 
 }
 
 h1, h2, li button  {
@@ -205,39 +205,44 @@ h1, h2, li button  {
     background: transparent;
     border: 1px solid gray;
     border-radius: 10px;
-    padding: 4% 4% 4% 5%;
+    padding: 1vh 3%;
     color: white;
     width: 90%;
+    height: 7vmin;
     margin: 0 auto 1vh 5%;
+    font-size: 4vmin;
 }
 
 .contact-label {
-    transition-duration: .5s;
-    -webkit-transition-duration: .5s;
-    -moz-transition-duration: .5s;
-    -o-transition-duration: .5s;
+    transition-duration: .3s;
+    -webkit-transition-duration: .3s;
+    -moz-transition-duration: .3s;
+    -o-transition-duration: .3s;
     opacity: 0;
     margin-left: 5%;
+    font-size: 2vmin;
 }
 
 #contact-section {
-    padding-top: 5vh;
+    height: 100%;
 }
 
 .about-content {
     width: 100%;
     margin: 0 0 2% 0;
     line-height: 1em;
+    font-size: 4vmin;
 }
 
 #submit-button {
-    width: 70px;
+    width: 24vmin;
+    height: 6vmin;
     margin-top: 1vh;
     border-radius: 7px;
     background-color: rgba(13, 51, 57, 0.3); 
     border: none;
     color: white;
-    font-size: .9em;
+    font-size: 3vmin;
     padding: 2%;
 }
 
@@ -246,7 +251,7 @@ input, button {
 }
 
 input::placeholder {
-    font-size: 3vw;
+    font-size: 3vmin;
     font-style: italic;
     color: white;
 }
@@ -326,7 +331,8 @@ legend {
 
 .project {
     height: 100%;
-    margin-bottom: 10%;
+    width: 40vmin;
+    margin: 5% auto 5% auto;
 }
 
 .projects-link {
@@ -339,14 +345,14 @@ legend {
 }
 
 .project p {
-    font-size: 2vh;
+    font-size: 3vmin;
     padding: 2%;
     text-align: center;
     margin: 0;
 }
 
 .projects-github-link {
-    font-size: 4vw;
+    font-size: 4vmin;
 }
 
 [class^=app-picture], a[class^=app-picture] {
@@ -361,21 +367,18 @@ a[class^=app-picture] {
 }
 
 .app-picture1 {
-    height: 26vh;
-    max-height: 100px;
+    height: 26vmin;
     border-radius: 10px 10px 0 0;
     margin: 0;
 }
 
 .app-picture2 {
-    height: 38vh;
-    max-height: 150px;
+    height: 38vmin;
     border-radius: 0 0 10px 10px;
 }
 
 h2 {
-    width: 100%;
-    font-size: 1.7em;
+    font-size: 6vmin;
     text-align: center;
     margin: 0;
     padding: 2%;
@@ -387,10 +390,8 @@ h2 {
 }
 
 #headshot-photo {
-    width: 22.87vw;
-    height: 30vw;
-    max-width: 228px;
-    max-height: 300px;
+    width: 22.87vmin;
+    height: 30vmin;
     margin: 0 auto;
     padding: 1vh .7vw 0;
 }
@@ -401,14 +402,15 @@ h2 {
     background: transparent;
     border: none;
     color: rgb(13, 51, 57);
-    font-size: .85em;
+    font-size: 4vmin;
+    font-weight: bold;
 }
 
 #contact-link-container {
     width: 100%;
     margin: 1vh 0 0 0;
     justify-content: space-around;
-    font-size: 5vw;
+    font-size: 5vmin;
 }
 
 a:link {
@@ -442,7 +444,7 @@ a:hover, button:hover  {
 @media only screen and (min-width: 420px) {
     .about-button, .home-button, .projects-button, .contact-button {
         display: list-item;
-        font-size: 3vw;
+        font-size: 3vmin;
     }
 
     
@@ -454,13 +456,18 @@ a:hover, button:hover  {
 
 @media only screen and (min-width: 421px) {
     .logo-button {
-        font-size: 5vw;
+        font-size: 5vmin;
     }
 
     #right-container {
         justify-content: space-between;
-        width: 45vw;
-        max-width: 350px;
+        width: 45vmin;
+        margin-left: 1vmax;
+    }
+
+    #right-container li {
+        padding: 0 1vmin;
+        font-size: 2vmin;
     }
 
     #render-container {
@@ -470,62 +477,62 @@ a:hover, button:hover  {
         background-size: auto 100%;
     }
 
-    h2 {
-        font-size: 5vh;
-    }
-
     .app-picture1 {
-        height: 26vh;
-        max-height: 300px;
+        height: 26vmin;
         border-radius: 10px 10px 0 0;
-        margin: 0;
+        
     }
     
     .app-picture2 {
-        height: 38vh;
-        max-height: 450px;
+        height: 38vmin;
         border-radius: 0 0 10px 10px;
     }
 
     footer {
-        font-size: 5vh;
+        font-size: 5vmin;
     }
 
     #contact-link-container {
-        font-size: 4vh;
+        font-size: 4vmin;
     }
 
-    .about-content {
-        font-size: 3.5vh;
+    .project {
+        width: 37vmin;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .projects-github-link {
-        font-size: 3vh;
+        font-size: 3.5vmin;
     }
 }
 
 @media only screen and (min-width: 720px) {
     .logo-button {
-        font-size: 3.5vh;
+        font-size: 4vmin;
     }
 
     .about-button, .home-button, .projects-button, .contact-button {
-        font-size: 2.5vh;
+        font-size: 3vmin;
     }
 
     legend {
-        font-size: 5.5vh;
+        font-size: 5.5vmin;
     }
 
     #home-section p {
-        font-size: 4vh;
+        font-size: 3.3vmin;
     }
 
     #right-container {
-        max-width: 450px;
+        max-width: 45vmin;
     }
 
     #footer-address {
-        font-size: 3vh;
+        font-size: 3vmin;
+    }
+
+    #home-section h1 {
+        font-size: 7vmin;
     }
 }

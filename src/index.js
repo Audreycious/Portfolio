@@ -45,7 +45,7 @@ function buttonHandler(params) {
         console.log("Projects clicked!");
         contentSectionFadeOut();
         contentSectionFadeIn(event.target);
-        if (!$(event.target).hasClass("page420")) {
+        if (!$(event.target).hasClass("page420") && !$(event.target).hasClass("projects-button-about-section")) {
             blurHandler();
         }
     })
@@ -57,6 +57,18 @@ function buttonHandler(params) {
         if (!$(event.target).hasClass("page420")) {
             blurHandler();
         }
+    })    
+
+    $("main").on("click", "button", function () {
+        $('#content-section').animate({scrollTop: 0}, "slow");
+        console.log(event.target);
+        console.log(STORE.hamburgerMenuOpen);
+        if (STORE.hamburgerMenuOpen) {
+            STORE.hamburgerMenuOpen = false;
+            $("#hemburgairrrrr-content-nav").fadeOut("slow", function() {
+
+            });
+        }
     })
 
     // hemburgairrrrr menu button
@@ -64,35 +76,12 @@ function buttonHandler(params) {
     $("main").on('click', "input.hemburgairrrrr-menu-button",  function () {
         blurHandler()
     })
-
-    $("main").on("click", "button", function () {
-        $('#content-section').animate({scrollTop: 0}, "slow");
-        console.log(event.target);
-        if (STORE.hamburgerMenuOpen) {
-            STORE.hamburgerMenuOpen = !STORE.hamburgerMenuOpen;
-            $("#hemburgairrrrr-content-nav").fadeOut("slow", function() {
-
-            });
-        }
-        if ($(event.target).hasClass("projects-button-about-section")) {
-            contentSectionFadeOut();
-            $(".projects-section").removeClass("hidden").fadeIn("slow", function() {
-
-            });
-            $("#content-section").removeClass("blur-filter");
-
-        }
-    })
-
-    $("#contact-form").on("submit", function () {
-        event.preventDefault();
-    })
 }
 
 function contentSectionFadeOut() {
-    $("#content-section").children().fadeOut(200, function() {
+    $("#content-section").children().addClass("float-section").fadeOut(200, function() {
 
-    });
+    }).removeClass("float-section");
     return;
 }
 
@@ -120,12 +109,12 @@ function contactLabelHandler() {
 
 function blurHandler() {
     STORE.hamburgerMenuOpen = !STORE.hamburgerMenuOpen;
-        if (STORE.hamburgerMenuOpen) {
-            blurIn();
-        }
-        else {
-            blurOut();
-        }
+    if (STORE.hamburgerMenuOpen) {
+        blurIn();
+    }
+    else {
+        blurOut();
+    }
 }
 
 function blurIn() {
