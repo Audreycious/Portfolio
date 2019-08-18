@@ -14,12 +14,13 @@
         <link rel="stylesheet" type="text/css" href="main.css">
         
         <link href="https://fonts.googleapis.com/css?family=Tangerine:400,700&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     </head>
 
     <body>
-        <main role="main" class="row">
-            <nav role="navigation" class="row">
+        <main class="row">
+            <nav class="row">
                 <ul class="row navbar-ul">
                     <li class="navbar-li"><button class="logo-button navbar-button" value="home">Kingfisher WebDev</button></li>
                    <div role="right-container" id="right-container" class="row">
@@ -27,13 +28,13 @@
                         <li class="navbar-li"><button class="projects-button navbar-button page420" value="projects">Projects</button></li>
                         <li class="navbar-li"><button class="contact-button navbar-button page420" value="contact">Contact</button></li>
                         <li class="navbar-li"><button class="home-button navbar-button page420" value="home">Home</button></li>
-                        <li class="hemburgairrrrr-menu-button navbar-li"><input class="hemburgairrrrr-menu-button" type="image" src="images\hamburger-menu-icon.png"></input></li>
+                        <li class="hemburgairrrrr-menu-button navbar-li"><input class="hemburgairrrrr-menu-button" type="image" src="images\hamburger-menu-icon.png"></li>
                     </div>
                 </ul>
             </nav>
             <!-- <img id="background-image-hexagon" src="images/kingfisher_heroBG_hexagon_720square.png" /> -->
-            <div role="render-area" id="render-container">
-                <div role="hemburgairrrrr-content-nav" id="hemburgairrrrr-content-nav" class="row">
+            <div id="render-container">
+                <div id="hemburgairrrrr-content-nav" class="row">
                     <ul id="hemburgairrrrr-navbar" class="row navbar-ul">
                         <li class="navbar-li"><button class="home-button-hemburgairrrrr navbar-button" value="home">Home</button></li>
                         <li class="navbar-li"><button class="about-button-hemburgairrrrr navbar-button" value="about">About</button></li>
@@ -41,14 +42,8 @@
                         <li class="navbar-li"><button class="contact-button-hemburgairrrrr navbar-button" value="contact">Contact</button></li>
                     </ul>   
                 </div>
-                <!-- <div role="hemburgairrrrr-content-box" id="hemburgairrrrr-content-box" class="col">
-                    <li><button class="home-button-hemburgairrrrr">Home</button></li>
-                    <li><button class="about-button-hemburgairrrrr">About</button></li>
-                    <li><button class="projects-button-hemburgairrrrr">Projects</button></li>
-                    <li><button class="contact-button-hemburgairrrrr">Contact</button></li>
-                </div> -->
-                <header role="content-area" class="row">
-                    <div role="content-container" id="content-section">
+                <header class="row">
+                    <div id="content-section">
                         <!-- Home Page View -->
                         <section id="home-section" class="home-section">
                             <h1>Audrey Foss</h1>
@@ -57,12 +52,12 @@
                         </section>
                         
                         <!-- About Page View -->
-                        <section role="about-section" id="about-section" class="about-section hidden">
-                            <div role="img-container" class="img-container row"> 
+                        <section id="about-section" class="about-section hidden">
+                            <div class="img-container row"> 
                                 <img src="images\AudreyFoss_headshot_oval.png" alt="Audrey Foss' headshot photo" id="headshot-photo">
                             </div>
-                            <!-- About Page Desktop View -->
-                            <div class="about-content" role="desktop-about-content">
+                            <!-- About Page View -->
+                            <div class="about-content">
                                 <p>After achieving personal goals in both my career and marriage to my amazing wife, I joined Thinkful to pursue my passion for tech; specifically for:</p> 
                                 <ul id="about-content-list" class="col">
                                     <li>Working with clients, listening to fulfill their needs</li>
@@ -79,7 +74,7 @@
                         </section>
 
                         <!-- Projects Page Mobile View -->
-                        <section role="projects-section" id="projects-section" class="projects-section hidden">
+                        <section id="projects-section" class="projects-section hidden">
                             <div id="quiz-app" class="project">
                                 <div class="projects-header">
                                     <h2>Simpsons Quiz App</h2>
