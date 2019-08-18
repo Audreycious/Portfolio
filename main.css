@@ -333,7 +333,7 @@ legend {
 .project {
     height: 100%;
     width: 40vmin;
-    margin: 5% auto 5% auto;
+    margin: 0 auto 5% auto;
 }
 
 .projects-link {
@@ -350,6 +350,10 @@ legend {
     padding: 2%;
     text-align: center;
     margin: 0;
+}
+
+.project h2 {
+    padding-top: 0;
 }
 
 .projects-github-link {
