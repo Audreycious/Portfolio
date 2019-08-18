@@ -204,13 +204,13 @@ h1, h2, li button  {
 .contact-input {
     background: transparent;
     border: 1px solid gray;
-    border-radius: 10px;
+    border-radius: 2vmin;
     padding: 1vh 3%;
     color: white;
     width: 90%;
     height: 7vmin;
-    margin: 0 auto 1vh 5%;
-    font-size: 4vmin;
+    margin: 0 auto 0 5%;
+    font-size: 3vmin;
 }
 
 .contact-label {
@@ -224,7 +224,7 @@ h1, h2, li button  {
 }
 
 #contact-section {
-    height: 100%;
+    line-height: 3.5vmin;
 }
 
 .about-content {
@@ -235,15 +235,16 @@ h1, h2, li button  {
 }
 
 #submit-button {
+    display: block;
     width: 24vmin;
-    height: 6vmin;
-    margin-top: 1vh;
-    border-radius: 7px;
+    height: 5vmin;
+    margin: 2vmin auto 0;
+    border-radius: 2vmin;
     background-color: rgba(13, 51, 57, 0.3); 
     border: none;
     color: white;
     font-size: 3vmin;
-    padding: 2%;
+    padding: 1vmin;
 }
 
 input, button {
@@ -269,8 +270,8 @@ label {
 }
 
 legend {
-    font-size: 6vw;
-    margin: 0 auto;
+    font-size: 5.5vmin;
+    margin: 1vmin auto;
     color: white;
 }
 
