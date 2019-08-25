@@ -486,17 +486,6 @@ a:hover, button:hover  {
         background-size: auto 100%;
     }
 
-    .app-picture1 {
-        height: 26vmin;
-        border-radius: 10px 10px 0 0;
-        
-    }
-    
-    .app-picture2 {
-        height: 38vmin;
-        border-radius: 0 0 10px 10px;
-    }
-
     footer {
         font-size: 5vmin;
     }
