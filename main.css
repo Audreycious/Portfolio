@@ -377,6 +377,10 @@ a[class^=app-picture] {
     margin: 0;
 }
 
+#trump-translator-home-page {
+    height: 38vmin;
+}
+
 .app-picture2 {
     height: 38vmin;
     border-radius: 0 0 10px 10px;
