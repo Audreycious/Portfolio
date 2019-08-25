@@ -378,7 +378,7 @@ a[class^=app-picture] {
 }
 
 #trump-translator-home-page {
-    height: 38vmin;
+    height: 38vmin !important;
 }
 
 .app-picture2 {
