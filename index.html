@@ -74,11 +74,41 @@
 
                         <!-- Projects Page Mobile View -->
                         <section id="projects-section" class="projects-section hidden">
+                            <div id="the-column" class="project">
+                                <div class="projects-header">
+                                    <h2>The Column</h2>
+                                    <p>A newspaper-themed social networking site based off the premise that resource limitations bring out the best in people. The app limits each account to 3 new articles per year and uses an API/database, also built by Audrey</p>
+                                    <p>Skills used include:<br/>HTML, CSS, Javascript, React, Node.js, Express, Postgres, Mocha, Chai, and Jest</p>
+                                </div>
+                                <div id="the-column-link" class="projects-link"> 
+                                    <a href="https://the-column-app.now.sh/" class="app-picture1" target="_blank"><img class="app-picture1" id="the-column-home-page" src="images/the-column_homepage-view.png" alt="The home page view of The Column app by Audrey Foss"></a>
+                                    <a href="https://the-column-app.now.sh/" class="app-picture2" target="_blank"><img class="app-picture2" id="the-column-articles-page" src="images/the-column_articles-view.png" alt="The search page view of The Column app by Audrey Foss"></a>
+                                    <a href="https://github.com/Audreycious/the-column/" class="projects-github-link" target="_blank">Link to GitHub Repo: Frontend</a>
+                                    <br/>
+                                    <a href="https://github.com/Audreycious/the-column-server/" class="projects-github-link" target="_blank">Link to GitHub Repo: Backend</a>
+                                </div>
+                            </div>
+                            <br/>
+                            <div id="allthedocs" class="project">
+                                <div class="projects-header">
+                                    <h2>AllTheDocs</h2>
+                                    <p>A study helper app that searches for results from StackOverflow, Youtube, and documents from an API/database, also built by Audrey</p>
+                                    <p>Skills used include:<br/>HTML, CSS, Javascript, React, Node.js, Express, Postgres, Mocha, Chai, and Jest</p>
+                                </div>
+                                <div id="allthedocs-link" class="projects-link"> 
+                                    <a href="https://allthedocs.audreycious.now.sh/" class="app-picture1" target="_blank"><img class="app-picture1" id="allthedocs-home-page" src="images/allthedocs_homepage-view.png" alt="The home page view of the AllTheDocs app by Audrey Foss"></a>
+                                    <a href="https://allthedocs.audreycious.now.sh/" class="app-picture2" target="_blank"><img class="app-picture2" id="allthedocs-search-page" src="images/allthedocs_search-view.png" alt="The search page view of the AllTheDocs by Audrey Foss"></a>
+                                    <a href="https://github.com/Audreycious/allthedocs/" class="projects-github-link" target="_blank">Link to GitHub Repo: Frontend</a>
+                                    <br/>
+                                    <a href="https://github.com/Audreycious/allthedocs-server/" class="projects-github-link" target="_blank">Link to GitHub Repo: Backend</a>
+                                </div>
+                            </div>
+                            <br/>
                             <div id="trump-tweet-translator" class="project">
                                 <div class="projects-header">
                                     <h2>Trump Tweet Translator</h2>
                                     <p>A fun translation app that uses real tweets from Donald Trump to create funny phrases</p>
-                                    <p>Skills used include HTML, CSS, Javascript, and jQuery</p>
+                                    <p>Skills used include:<br/>HTML, CSS, Javascript, and jQuery</p>
                                 </div>
                                 <div id="trump-translator-link" class="projects-link"> 
                                     <a href="https://audreycious.github.io/Trump-Tweet-Translator/" class="app-picture1" target="_blank"><img class="app-picture1" id="trump-translator-home-page" src="images/TrumpTranslator-HomePage.png" alt="The home page view of the Trump Tweet Translator app by Audrey Foss"></a>
@@ -86,11 +116,12 @@
                                     <a href="https://github.com/Audreycious/trump-tweet-translator/" class="projects-github-link" target="_blank">Link to GitHub Repo</a>
                                 </div>
                             </div>
+                            <br/>
                             <div id="quiz-app" class="project">
                                 <div class="projects-header">
                                     <h2>Simpsons Quiz App</h2>
                                     <p>A 10-question quiz app based on the popular TV show: The Simpsons</p>
-                                    <p>Skills used include HTML, CSS, Javascript, and jQuery</p>
+                                    <p>Skills used include:<br/>HTML, CSS, Javascript, and jQuery</p>
                                 </div>
                                 <div id="quiz-app-link" class="projects-link"> 
                                     <a href="https://audreycious.github.io/Quiz-App/" class="app-picture1" target="_blank"><img class="app-picture1" src="images/quiz-app_homepage-view.png" alt="The home page view of the Simpsons' Quiz by Audrey Foss"></a>
@@ -102,17 +133,17 @@
 
                         <!-- Contact Page Mobile View -->
                         <section id="contact-section" class="contact-section hidden">
-                            <form action="https://formspree.io/AFossWebDev@gmail.com" method="POST" enctype="text/plain" id="contact-form">
+                            <form action="https://formspree.io/AFossWebDev@gmail.tld" method="POST" enctype="text/plain" id="contact-form">
                                 <h2>Hire Audrey</h2>
 
                                 <label for="name" class="contact-label">Name</label>
                                 <input class="contact-input" type="text" placeholder="What should I call you?" required name="name">
 
                                 <label for="email" class="contact-label">Email Address</label>
-                                <input type="email" class="contact-input" placeholder="What's your email?" required name="email">
+                                <input type="email" class="contact-input" placeholder="What's your email?" required name="_replyto">
 
                                 <label for="tel" class="contact-label">Phone Number</label>
-                                <input type="tel" class="contact-input" placeholder="Can I get them digits?" name="tel">
+                                <input type="tel" class="contact-input" placeholder="What's your phone #?" name="tel">
                                 
                                 <input type="submit" id="submit-button" value="Send">
                             </form>
@@ -127,7 +158,7 @@
         </main>     
         <footer id="footer" class="row">
             <div id="footer-container" class="row">
-                <a href="mailto:AFossWebDev@gmail.com?subject='I\'m interested in KingFisher WebDev'" id="email-hyperlink" target="_blank">Email</a>
+                <a href="mailto:AFossWebDev@gmail.com?subject=I'm interested in KingFisher WebDev" id="email-hyperlink" target="_blank">Email</a>
                 <p id="footer-address" class="center">Est. 2019<br />
                     Minneapolis, MN
                 </p>

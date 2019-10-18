@@ -377,8 +377,12 @@ a[class^=app-picture] {
     margin: 0;
 }
 
-#trump-translator-home-page {
+#trump-translator-home-page, #the-column-articles-page {
     height: 38vmin !important;
+}
+
+#allthedocs-home-page, #allthedocs-search-page {
+    height: 32vmin !important;
 }
 
 .app-picture2 {
